@@ -3,27 +3,18 @@ import HeroAvatar from '@/public/images/hero-avatar.jpg';
 export const aboutData = {
     mainData: {
         heroAvatar: HeroAvatar,
-        biography: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-        projectsDone: "432",
-        yearsOfExperience: "13",
-        worldwideClients: "900",
+        biography: "Ingeniero en Sistemas con más de 7 años de experiencia en el aseguramiento de la calidad (QA) paraaplicaciones web, móviles y APIs. Especialista en pruebas funcionales, automatizadas y de regresión, conliderazgo en equipos ágiles (Scrum/Kanban). Actualmente enfocada en la validación de chatbots, centros de llamadas y sistemas con IA, garantizando experiencias digitales confiables y de alto rendimiento.",
+        projectsDone: "20",
+        yearsOfExperience: "7",
+        worldwideClients: "50",
     },
     skills: [
         {
-            name: 'Web Development',
+            name: 'QA Lead',
         },
         {
-            name: 'UI & UX Design',
-        },
-        {
-            name: 'Marketing',
-        },
-        {
-            name: 'SEO',
-        },
-        {
-            name: 'Management',
-        },
+            name: 'Analista de Calidad',
+        }
     ],
     connect: [
         {

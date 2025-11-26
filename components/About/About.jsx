@@ -24,7 +24,7 @@ const About = () => {
                             <h6 className="sm-heading">Skills</h6>
                             <ul className="list-inline-dot">
                                 {aboutData.skills.map((item, index) => (
-                                    <li key={index}>{item.name}</li>
+                                    <li key={index}><strong>{item.category}:</strong> {item.items}</li>
                                 ))}
                             </ul>
                         </div>

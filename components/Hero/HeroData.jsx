@@ -1,5 +1,5 @@
 export const heroData = {
     mainData: {
-        name: "Arthur Jackson",
+        name: "Jennifer Lozano",
     }
 };
