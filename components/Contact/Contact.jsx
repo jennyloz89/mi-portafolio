@@ -10,23 +10,18 @@ const Contact = () => {
         subject: '',
     });
 
-    const [submitStatus, setSubmitStatus] = useState(null);
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        const response = await fetch('/api/contact', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData),
+    const handleChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value,
         });
+    };
 
-        if (response.status === 200) {
-            setSubmitStatus('success');
-        } else {
-            setSubmitStatus('error');
-        }
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // Usar mailto: para enviar correo (compatible con GitHub Pages)
+        const mailtoLink = `mailto:${contactData.mainData.email}?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`Nombre: ${formData.name}\nEmail: ${formData.email}\n\nMensaje:\n${formData.message}`)}`;
+        window.location.href = mailtoLink;
     };
 
     return (
@@ -53,27 +48,48 @@ const Contact = () => {
                             <form method="post" id="contactform" onSubmit={handleSubmit}>
                                 <div className="row gx-3 gy-0">
                                     <div className="col-12 col-md-6">
-                                        <input type="text" id="name" name="name" placeholder="Name" required />
+                                        <input 
+                                            type="text" 
+                                            id="name" 
+                                            name="name" 
+                                            placeholder="Name" 
+                                            required 
+                                            value={formData.name}
+                                            onChange={handleChange}
+                                        />
                                     </div>
                                     <div className="col-12 col-md-6">
-                                        <input type="email" id="email" name="email" placeholder="E-Mail" required />
+                                        <input 
+                                            type="email" 
+                                            id="email" 
+                                            name="email" 
+                                            placeholder="E-Mail" 
+                                            required 
+                                            value={formData.email}
+                                            onChange={handleChange}
+                                        />
                                     </div>
                                 </div>
-                                <input type="text" id="subject" name="subject" placeholder="Subject" required />
-                                <textarea name="message" id="message" placeholder="Message"></textarea>
+                                <input 
+                                    type="text" 
+                                    id="subject" 
+                                    name="subject" 
+                                    placeholder="Subject" 
+                                    required 
+                                    value={formData.subject}
+                                    onChange={handleChange}
+                                />
+                                <textarea 
+                                    name="message" 
+                                    id="message" 
+                                    placeholder="Message"
+                                    value={formData.message}
+                                    onChange={handleChange}
+                                ></textarea>
                                 <button className="button button-dot" type="submit">
                                     <span data-text="Send Message">Send Message</span>
                                 </button>
                             </form>
-                            {/* Submit result */}
-                            <div className="submit-result">
-                                {submitStatus === 'success' && (
-                                    <span id="success">Thank you! Your Message has been sent.</span>
-                                )}
-                                {submitStatus === 'error' && (
-                                    <span id="error">Something went wrong. Please try again!</span>
-                                )}
-                            </div>
                         </div>
                     </div>
                 </div>

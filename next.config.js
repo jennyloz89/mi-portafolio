@@ -6,6 +6,12 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
+  output: 'export',
+  images: {
+    unoptimized: true,
+  },
+  basePath: '/mi-portafolio',
+  assetPrefix: '/mi-portafolio/',
 }
 
 module.exports = nextConfig
