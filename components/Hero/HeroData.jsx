@@ -1,5 +1,6 @@
 export const heroData = {
     mainData: {
-        name: "Hola, soy Jennifer",
+        greeting: "Hola, soy",
+        name: "Jennifer Lozano",
     }
 };
