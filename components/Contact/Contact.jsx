@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { contactData } from './ContactData';
-import { Map } from '..';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -93,9 +92,6 @@ const Contact = () => {
                         </div>
                     </div>
                 </div>
-                {/* Google Maps */}
-                <Map />
-                {/* end Google Maps */}
             </div>
         </div>
     );
