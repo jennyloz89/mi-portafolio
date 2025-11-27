@@ -41,6 +41,25 @@ const About = () => {
                                 ))}
                             </ul>
                         </div>
+                        <div className="col-12 col-lg-12 mt-4">
+                            <h6 className="sm-heading">Download CV</h6>
+                            <div className="d-flex gap-2 flex-wrap">
+                                <a 
+                                    href="/mi-portafolio/CV_Jenny_ES.pdf" 
+                                    download 
+                                    className="btn btn-outline-light btn-sm"
+                                >
+                                    <i className="bi bi-download me-2"></i>Español
+                                </a>
+                                <a 
+                                    href="/mi-portafolio/CV_Jenny_EN.pdf" 
+                                    download 
+                                    className="btn btn-outline-light btn-sm"
+                                >
+                                    <i className="bi bi-download me-2"></i>English
+                                </a>
+                            </div>
+                        </div>
                     </div> {/* end row(inner) */}
                 </div>
                 <div className="col-12 col-md-12 col-lg-4 order-lg-3 text-lg-end">
