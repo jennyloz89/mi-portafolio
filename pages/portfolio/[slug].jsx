@@ -1,20 +1,9 @@
-import React, { useState } from 'react'
-import { Lightbox } from '@/components'
+import React from 'react'
 import Head from 'next/head'
-import Image from 'next/image';
 import Link from 'next/link';
 import { portfolioData } from '@/components/Portfolio/PortfolioData';
 
 const ProjectPage = ({ project, prevProject, nextProject }) => {
-    const [lightboxImage, setLightboxImage] = useState(null);
-
-    const openLightbox = (image) => {
-        setLightboxImage(image);
-    };
-
-    const closeLightbox = () => {
-        setLightboxImage(null);
-    };
 
     const getLastWord = (str) => {
         const words = str.split(' ');
@@ -98,25 +87,8 @@ const ProjectPage = ({ project, prevProject, nextProject }) => {
                                     <div dangerouslySetInnerHTML={{ __html: project.content }} />
                                 </div>
                             </div> {/* end row */}
-                            {/* Project Media */}
-                            <div className="row g-4 g-lg-5 mt-1">
-                                <div className="col-12">
-                                    <Image className="border-radius" src={project.mainImageWide} alt={project.title} placeholder="blur" />
-                                </div>
-                                {/* Images Lightbox */}
-                                {project.images.map((item, index) => (
-                                    <div key={index} className="col-12 col-md-6">
-                                        <div onClick={() => openLightbox(item.image)}>
-                                            <div className="lightbox-image-box border-radius">
-                                                <Image src={item.image} alt={project.title} placeholder="blur" />
-                                                <div className="lightbox-icon">
-                                                    <i className="bi bi-arrows-fullscreen"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                ))}
-                                <div className="row mt-5">
+                            {/* Navigation */}
+                            <div className="row mt-5">
                                     {prevProject ? (
                                         <div className="col-6">
                                             <Link href={`/portfolio/${prevProject.slug}`} className="button">
@@ -148,9 +120,6 @@ const ProjectPage = ({ project, prevProject, nextProject }) => {
                         </div>
                     </div>
                 </div>
-                {lightboxImage && (
-                    <Lightbox image={lightboxImage} closeLightbox={closeLightbox} />
-                )}
             </main>
         </>
     )
