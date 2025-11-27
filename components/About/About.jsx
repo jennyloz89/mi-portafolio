@@ -22,9 +22,9 @@ const About = () => {
                         </div>
                         <div className="col-6 col-md-4 col-lg-12">
                             <h6 className="sm-heading">Skills</h6>
-                            <ul className="list-inline-dot">
+                            <ul className="list-unstyled">
                                 {aboutData.skills.map((item, index) => (
-                                    <li key={index}><strong>{item.category}:</strong> {item.items}</li>
+                                    <li key={index} className="mb-2"><strong>{item.category}:</strong> {item.items}</li>
                                 ))}
                             </ul>
                         </div>
