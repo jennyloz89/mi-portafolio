@@ -79,37 +79,59 @@ const Portfolio = () => {
                         }}
                         className="portfolio-slider mt-4 mt-lg-5"
                     >
-                        {portfolioData.projects.map((item, index) => (
-                            <SwiperSlide key={index}>
-                                <div className="portfolio-box">
-                                    {/* Image */}
-                                    <div className="portfolio-img">
-                                        <Link href={`portfolio/${item.slug}`}>
-                                            <Image src={item.mainImage} alt={item.title} placeholder="blur" />
-                                        </Link>
-                                    </div>
-                                    <div className="pt-4">
-                                        {/* Categories */}
-                                        <ul className="list-inline-dot sm-heading text-white mb-2">
-                                            {item.categories.map((item, index) => (
-                                                <li key={index}>
-                                                    <Link className="link-hover" href={`portfolio/${item.slug}`}>
-                                                        <span data-text={item.name}>{item.name}</span>
+                        {portfolioData.projects.map((item, index) => {
+                            const projectUrl = item.githubUrl || `portfolio/${item.slug}`;
+                            const isExternal = !!item.githubUrl;
+                            
+                            return (
+                                <SwiperSlide key={index}>
+                                    <div className="portfolio-box">
+                                        {/* Image */}
+                                        <div className="portfolio-img">
+                                            {isExternal ? (
+                                                <a href={projectUrl} target="_blank" rel="noopener noreferrer">
+                                                    <Image src={item.mainImage} alt={item.title} placeholder="blur" />
+                                                </a>
+                                            ) : (
+                                                <Link href={projectUrl}>
+                                                    <Image src={item.mainImage} alt={item.title} placeholder="blur" />
+                                                </Link>
+                                            )}
+                                        </div>
+                                        <div className="pt-4">
+                                            {/* Categories */}
+                                            <ul className="list-inline-dot sm-heading text-white mb-2">
+                                                {item.categories.map((cat, catIndex) => (
+                                                    <li key={catIndex}>
+                                                        {isExternal ? (
+                                                            <span>{cat.name}</span>
+                                                        ) : (
+                                                            <Link className="link-hover" href={`portfolio/${item.slug}`}>
+                                                                <span data-text={cat.name}>{cat.name}</span>
+                                                            </Link>
+                                                        )}
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                            {/* Caption */}
+                                            <h2>
+                                                {isExternal ? (
+                                                    <a className="portfolio-caption" href={projectUrl} target="_blank" rel="noopener noreferrer">
+                                                        <i className="bi bi-arrow-right"></i>
+                                                        {item.title}
+                                                    </a>
+                                                ) : (
+                                                    <Link className="portfolio-caption" href={projectUrl}>
+                                                        <i className="bi bi-arrow-right"></i>
+                                                        {item.title}
                                                     </Link>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                        {/* Caption */}
-                                        <h2>
-                                            <Link className="portfolio-caption" href={`portfolio/${item.slug}`}>
-                                                <i className="bi bi-arrow-right"></i>
-                                                {item.title}
-                                            </Link>
-                                        </h2>
+                                                )}
+                                            </h2>
+                                        </div>
                                     </div>
-                                </div>
-                            </SwiperSlide>
-                        ))}
+                                </SwiperSlide>
+                            );
+                        })}
                     </Swiper>
                 </div> {/* end container */}
             </div>

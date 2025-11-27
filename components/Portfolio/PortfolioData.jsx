@@ -3,10 +3,10 @@ import MainImage from '@/public/images/blog-img-wide.jpg';
 
 export const portfolioData = {
     mainData: {
-        title: "Portfolio",
+        title: "Projects",
         title2: "Recent",
         title2Span: "Works",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"
+        description: "Aquí comparto algunos de los proyectos donde he aplicado QA funcional, automatización y validación conversacional. Cada uno refleja mi enfoque en calidad, documentación clara y experiencia de usuario."
     },
     projects: [
         {
@@ -66,6 +66,7 @@ export const portfolioData = {
         {
             title: 'Project Title Here',
             slug: 'third',
+            githubUrl: 'https://github.com/jennyloz89/cypress-login-saucedemo',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit',
             services: [
                 { name: 'List item' },
