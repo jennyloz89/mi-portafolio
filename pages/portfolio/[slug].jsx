@@ -62,10 +62,21 @@ const ProjectPage = ({ project, prevProject, nextProject }) => {
                             </div>
                             <div className="col-12 col-md-6 col-lg-3">
                                 <div className="fancy-box">
-                                    <h6 className="sm-heading mb-1">Project link:</h6>
-                                    <Link className="link-hover" href={project.projectLink.url}>
-                                        <span data-text={project.projectLink.title}>{project.projectLink.title}</span>
-                                    </Link>
+                                    {project.githubUrl ? (
+                                        <>
+                                            <h6 className="sm-heading mb-1">GitHub Repository:</h6>
+                                            <a className="link-hover" href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                                                <span data-text="Ver en GitHub">Ver en GitHub</span>
+                                            </a>
+                                        </>
+                                    ) : (
+                                        <>
+                                            <h6 className="sm-heading mb-1">Project link:</h6>
+                                            <Link className="link-hover" href={project.projectLink.url}>
+                                                <span data-text={project.projectLink.title}>{project.projectLink.title}</span>
+                                            </Link>
+                                        </>
+                                    )}
                                 </div>
                             </div>
                             <div className="col-12 col-md-6 col-lg-3">
