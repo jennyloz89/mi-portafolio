@@ -1,9 +1,7 @@
 export const contactData = {
     mainData: {
-        title: "Clients",
-        title2: "Let's",
-        title2Span: "Talk",
-        phone: "+123 456 7890",
-        email: "contact@flatheme.net",
+   
+        phone: "+52 81 2656 2329",
+        email: "jennyloz89@gmail.com",
     }
 };
