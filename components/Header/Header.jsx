@@ -64,9 +64,6 @@ const Header = () => {
 									<Link className="nav-link" href="/#awards"><i className="bi bi-arrow-right"></i>Awards</Link>
 								</li>
 								<li className="nav-item">
-									<Link className="nav-link" href="/#testimonial"><i className="bi bi-arrow-right"></i>Testimonial</Link>
-								</li>
-								<li className="nav-item">
 									<Link className="nav-link" href="/#blog"><i className="bi bi-arrow-right"></i>Blog</Link>
 								</li>
 								<li className="nav-item">

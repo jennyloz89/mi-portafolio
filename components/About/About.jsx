@@ -21,7 +21,7 @@ const About = () => {
                             <p>{aboutData.mainData.biography}</p>
                         </div>
                         <div className="col-12 col-md-8 col-lg-12">
-                            <h6 className="sm-heading">Skills</h6>
+                            <h6 className="sm-heading">🛠️ Technology</h6>
                             <ul className="list-unstyled">
                                 {aboutData.skills.map((item, index) => (
                                     <li key={index} className="mb-2"><strong>{item.category}:</strong> {item.items}</li>

@@ -9,25 +9,15 @@ export const aboutData = {
         worldwideClients: "50",
     },
     skills: [
-        { category: 'QA & Testing', items: 'Pruebas funcionales, regresión, exploratorias, UAT' },
-        { category: 'Automation', items: 'Cypress, WebdriverIO, Appium, Postman' },
-        { category: 'Languages', items: 'JavaScript, TypeScript, SQL' },
-        { category: 'Tools', items: 'Jira, Sentry, Jenkins' },
+        { category: 'Automation', items: 'Cypress, WebdriverIO, Appium, Selenium, Postman, JMeter' },
+        { category: 'Languages', items: 'JavaScript, TypeScript, SQL, Python' },
+        { category: 'Tools', items: 'Jira, TestRail, Sentry, Jenkins, Git, CI/CD' },
         { category: 'Agile', items: 'Scrum, Kanban' },
-        { category: 'Soft Skills', items: 'Documentación clara, mejora continua, enfoque en experiencia de usuario' },
     ],
     connect: [
         {
-            url: '#',
-            bootstrapIcon: 'bi bi-facebook',
-        },
-        {
-            url: '#',
-            bootstrapIcon: 'bi bi-twitter',
-        },
-        {
-            url: '#',
-            bootstrapIcon: 'bi bi-instagram',
+            url: 'https://www.linkedin.com/in/jenniferlozanop/',
+            bootstrapIcon: 'bi bi-linkedin',
         },
     ]
 };
