@@ -7,21 +7,21 @@ export const servicesData = {
     services: [
         {
             number: '01',
-            bootstrapIcon: 'bi bi-brush',
-            title: 'Design',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut',
+            bootstrapIcon: 'bi bi-compass',
+            title: 'QA Strategy & Leadership',
+            description: 'Defino estrategias de aseguramiento de calidad para aplicaciones web, móviles, APIs y sistemas con IA. Lidero equipos QA en entornos ágiles (Scrum/Kanban), coordinando entregables, validaciones y mejoras continuas.',
         },
         {
             number: '02',
-            bootstrapIcon: 'bi bi-code-slash',
-            title: 'Development',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et',
+            bootstrapIcon: 'bi bi-gear',
+            title: 'Manual & Automated Testing',
+            description: 'Diseño y ejecuto pruebas funcionales, de regresión, integración, aceptación (UAT), exploratorias y de interfaz. Utilizo herramientas como Cypress, Selenium, Appium y Jenkins para validar desde frontend hasta bases de datos.',
         },
         {
             number: '03',
-            bootstrapIcon: 'bi bi-laptop',
-            title: 'Marketing',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore',
+            bootstrapIcon: 'bi bi-chat-dots',
+            title: 'Conversational QA & AI Validation',
+            description: 'Especialista en validación de chatbots y centros de llamadas. Evalúo flujos conversacionales, lógica de respuestas y experiencia de usuario en proyectos educativos y de atención al cliente, garantizando interacciones confiables y empáticas.',
         },
     ]
 };
