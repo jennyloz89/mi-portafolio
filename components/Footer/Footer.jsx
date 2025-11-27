@@ -6,7 +6,8 @@ const Footer = () => {
 
     return (
         <div className="py-4 py-lg-5 text-center">
-            <p>&copy; {currentYear} {footerData.name}, {footerData.copyWriteText}</p>
+            <p>&copy; {currentYear} {footerData.name}</p>
+            <p>{footerData.copyWriteText}</p>
         </div>
     )
 }

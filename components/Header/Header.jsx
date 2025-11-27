@@ -41,9 +41,6 @@ const Header = () => {
 					</div>
 					{/* Header Nav */}
 					<div className="header-nav">
-						<Link className="button button-sm button-dot me-2 me-lg-3" href="/#contact">
-							<span data-text="Let's Talk">Let&apos;s Talk</span>
-						</Link>
 						{/* Nav Menu Toggle */}
 						<button type="button" onClick={toggleMenu} className="button button-sm button-dot button-white">
 							<span data-text="Menu">Menu</span>
@@ -65,9 +62,6 @@ const Header = () => {
 								</li>
 								<li className="nav-item">
 									<Link className="nav-link" href="/#blog"><i className="bi bi-arrow-right"></i>Blog</Link>
-								</li>
-								<li className="nav-item">
-									<Link className="nav-link" href="/#contact"><i className="bi bi-arrow-right"></i>Contact</Link>
 								</li>
 							</ul>
 						</div>

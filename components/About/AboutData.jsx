@@ -16,8 +16,20 @@ export const aboutData = {
     ],
     connect: [
         {
+            url: 'mailto:jennyloz89@gmail.com',
+            bootstrapIcon: 'bi bi-envelope',
+        },
+        {
+            url: 'https://github.com/jennyloz89',
+            bootstrapIcon: 'bi bi-github',
+        },
+        {
             url: 'https://www.linkedin.com/in/jenniferlozanop/',
             bootstrapIcon: 'bi bi-linkedin',
+        },
+        {
+            url: 'tel:+528126562329',
+            bootstrapIcon: 'bi bi-telephone',
         },
     ]
 };

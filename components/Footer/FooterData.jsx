@@ -1,4 +1,4 @@
 export const footerData = {
-    name: 'FlaTheme',
-    copyWriteText: 'All Rights Reserved.',
+    name: 'Jennifer Lozano - QA Analyst.',
+    copyWriteText: 'Hecho con React. Todos los derechos reservados.',
 };
