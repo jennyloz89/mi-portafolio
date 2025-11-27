@@ -45,14 +45,14 @@ const About = () => {
                             <h6 className="sm-heading">Download CV</h6>
                             <div className="d-flex gap-2 flex-wrap">
                                 <a 
-                                    href="/mi-portafolio/CV_Jenny_ES.pdf" 
+                                    href="/mi-portafolio/CV_Jennifer_Lozano_ES.pdf" 
                                     download 
                                     className="btn btn-outline-light btn-sm"
                                 >
                                     <i className="bi bi-download me-2"></i>Español
                                 </a>
                                 <a 
-                                    href="/mi-portafolio/CV_Jenny_EN.pdf" 
+                                    href="/mi-portafolio/CV_Jennifer_Lozano_EN.pdf" 
                                     download 
                                     className="btn btn-outline-light btn-sm"
                                 >
