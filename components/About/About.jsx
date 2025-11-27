@@ -20,45 +20,13 @@ const About = () => {
                             <h6 className="sm-heading">Biography</h6>
                             <p>{aboutData.mainData.biography}</p>
                         </div>
-                        <div className="col-6 col-md-4 col-lg-12">
+                        <div className="col-12 col-md-8 col-lg-12">
                             <h6 className="sm-heading">Skills</h6>
                             <ul className="list-unstyled">
                                 {aboutData.skills.map((item, index) => (
                                     <li key={index} className="mb-2"><strong>{item.category}:</strong> {item.items}</li>
                                 ))}
                             </ul>
-                        </div>
-                        <div className="col-6 col-md-4 col-lg-12">
-                            <h6 className="sm-heading">Connect</h6>
-                            <ul className="list-inline">
-                                {aboutData.connect.map((item, index) => (
-                                    <li key={index}>
-                                        <Link className="button-circle button-circle-sm" href={item.url} aria-label="Social media link">
-                                            <i className={item.bootstrapIcon}></i>
-                                            <i className={item.bootstrapIcon}></i>
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                        <div className="col-12 col-lg-12 mt-4">
-                            <h6 className="sm-heading">Download CV</h6>
-                            <div className="d-flex gap-2 flex-wrap">
-                                <a 
-                                    href="/mi-portafolio/CV_Jennifer_Lozano_ES.pdf" 
-                                    download 
-                                    className="btn btn-outline-light btn-sm"
-                                >
-                                    <i className="bi bi-download me-2"></i>Español
-                                </a>
-                                <a 
-                                    href="/mi-portafolio/CV_Jennifer_Lozano_EN.pdf" 
-                                    download 
-                                    className="btn btn-outline-light btn-sm"
-                                >
-                                    <i className="bi bi-download me-2"></i>English
-                                </a>
-                            </div>
                         </div>
                     </div> {/* end row(inner) */}
                 </div>
@@ -75,6 +43,38 @@ const About = () => {
                         <div className="col-4 col-lg-12">
                             <h6 className="sm-heading">Worldwide Clients</h6>
                             <h1 className="fw-light display-4 mb-0 line-height-110">{aboutData.mainData.worldwideClients}</h1>
+                        </div>
+                        <div className="col-12 col-lg-12 mt-3">
+                            <h6 className="sm-heading">Connect</h6>
+                            <ul className="list-inline justify-content-lg-end">
+                                {aboutData.connect.map((item, index) => (
+                                    <li key={index}>
+                                        <Link className="button-circle button-circle-sm" href={item.url} aria-label="Social media link">
+                                            <i className={item.bootstrapIcon}></i>
+                                            <i className={item.bootstrapIcon}></i>
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                        <div className="col-12 col-lg-12">
+                            <h6 className="sm-heading">Download CV</h6>
+                            <div className="d-flex gap-2 flex-wrap justify-content-lg-end">
+                                <a 
+                                    href="/mi-portafolio/CV_Jennifer_Lozano_ES.pdf" 
+                                    download 
+                                    className="btn btn-outline-light btn-sm"
+                                >
+                                    <i className="bi bi-download me-2"></i>Español
+                                </a>
+                                <a 
+                                    href="/mi-portafolio/CV_Jennifer_Lozano_EN.pdf" 
+                                    download 
+                                    className="btn btn-outline-light btn-sm"
+                                >
+                                    <i className="bi bi-download me-2"></i>English
+                                </a>
+                            </div>
                         </div>
                     </div> {/* end row(inner) */}
                 </div>
