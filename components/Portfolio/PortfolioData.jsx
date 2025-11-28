@@ -1,5 +1,6 @@
 import PortfolioImg from '@/public/images/portfolio-img.jpg';
 import MainImage from '@/public/images/blog-img-wide.jpg';
+import CypressImage from '@/public/images/cypress-saucedemo.png';
 
 export const portfolioData = {
     mainData: {
@@ -79,7 +80,7 @@ export const portfolioData = {
             },
             duration: '121 hours',
             content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-            mainImage: PortfolioImg,
+            mainImage: CypressImage,
             mainImageWide: MainImage,
             images: [
                 { image: PortfolioImg },
