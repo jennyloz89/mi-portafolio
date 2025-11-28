@@ -115,9 +115,8 @@ const ProjectPage = ({ project, prevProject, nextProject }) => {
                                             </button>
                                         </div>
                                     )}
-                                </div>
-                            </div> {/* end container */}
-                        </div>
+                            </div>
+                        </div> {/* end container */}
                     </div>
                 </div>
             </main>
