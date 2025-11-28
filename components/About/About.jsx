@@ -42,13 +42,11 @@ const About = () => {
                                             >
                                                 <strong>{cert.name}</strong>
                                                 {cert.issuer && <span> - {cert.issuer}</span>}
-                                                {cert.certificateId && <span> (ID: {cert.certificateId})</span>}
                                             </a>
                                         ) : (
                                             <>
                                                 <strong>{cert.name}</strong>
                                                 {cert.issuer && <span> - {cert.issuer}</span>}
-                                                {cert.certificateId && <span> (ID: {cert.certificateId})</span>}
                                             </>
                                         )}
                                     </li>
@@ -66,10 +64,6 @@ const About = () => {
                         <div className="col-4 col-lg-12">
                             <h6 className="sm-heading">Years of Experience</h6>
                             <h1 className="fw-light display-4 mb-0 line-height-110">{aboutData.mainData.yearsOfExperience}+</h1>
-                        </div>
-                        <div className="col-4 col-lg-12">
-                            <h6 className="sm-heading">Worldwide Clients</h6>
-                            <h1 className="fw-light display-4 mb-0 line-height-110">{aboutData.mainData.worldwideClients}</h1>
                         </div>
                         <div className="col-12 col-lg-12 mt-3">
                             <h6 className="sm-heading">Connect</h6>
