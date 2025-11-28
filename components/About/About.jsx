@@ -39,6 +39,7 @@ const About = () => {
                                                 target="_blank" 
                                                 rel="noopener noreferrer"
                                                 className="text-decoration-none"
+                                                style={{ color: 'inherit' }}
                                             >
                                                 <strong>{cert.name}:</strong> {cert.issuer}
                                             </a>

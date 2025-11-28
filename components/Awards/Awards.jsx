@@ -3,15 +3,15 @@ import { awardsData } from './AwardsData'
 
 const Awards = () => {
     return (
-        <div id="awards" className="section pb-0">
+        <div id="awards" className="section pt-0 pb-0">
             <div className="container">
-                <div className="row g-4 g-xl-5">
+                <div className="row g-3 g-xl-4">
                     <div className="col-12 col-xl-4">
                         <span className="title-heading text-white-04">{awardsData.mainData.title}</span>
                         <h1 className="display-3 fw-medium mb-0">{awardsData.mainData.title2}<span className="text-gradient">{awardsData.mainData.title2Span}</span></h1>
                     </div>
                     <div className="col-12 col-xl-8">
-                        <div className="row g-4">
+                        <div className="row g-3">
                             {awardsData.awards.map((item, index) => (
                                 <div key={index} className="col-12 col-md-6">
                                     <div className="fancy-box">
