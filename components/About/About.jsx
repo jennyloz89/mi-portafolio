@@ -40,13 +40,11 @@ const About = () => {
                                                 rel="noopener noreferrer"
                                                 className="text-decoration-none"
                                             >
-                                                <strong>{cert.name}</strong>
-                                                {cert.issuer && <span> - {cert.issuer}</span>}
+                                                <strong>{cert.name}:</strong> {cert.issuer}
                                             </a>
                                         ) : (
                                             <>
-                                                <strong>{cert.name}</strong>
-                                                {cert.issuer && <span> - {cert.issuer}</span>}
+                                                <strong>{cert.name}:</strong> {cert.issuer}
                                             </>
                                         )}
                                     </li>
