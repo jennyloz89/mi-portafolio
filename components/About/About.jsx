@@ -28,6 +28,33 @@ const About = () => {
                                 ))}
                             </ul>
                         </div>
+                        <div className="col-12 col-md-8 col-lg-12">
+                            <h6 className="sm-heading">🏆 Certifications</h6>
+                            <ul className="list-unstyled">
+                                {aboutData.certifications.map((cert, index) => (
+                                    <li key={index} className="mb-2">
+                                        {cert.verifyUrl ? (
+                                            <a 
+                                                href={cert.verifyUrl} 
+                                                target="_blank" 
+                                                rel="noopener noreferrer"
+                                                className="text-decoration-none"
+                                            >
+                                                <strong>{cert.name}</strong>
+                                                {cert.issuer && <span> - {cert.issuer}</span>}
+                                                {cert.certificateId && <span> (ID: {cert.certificateId})</span>}
+                                            </a>
+                                        ) : (
+                                            <>
+                                                <strong>{cert.name}</strong>
+                                                {cert.issuer && <span> - {cert.issuer}</span>}
+                                                {cert.certificateId && <span> (ID: {cert.certificateId})</span>}
+                                            </>
+                                        )}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
                     </div> {/* end row(inner) */}
                 </div>
                 <div className="col-12 col-md-12 col-lg-4 order-lg-3 text-lg-end">

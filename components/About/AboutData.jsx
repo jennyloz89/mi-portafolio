@@ -14,6 +14,20 @@ export const aboutData = {
         { category: 'Tools', items: 'Jira, TestRail, Sentry, Jenkins, Git, CI/CD' },
         { category: 'Agile', items: 'Scrum, Kanban' },
     ],
+    certifications: [
+        { 
+            name: 'Six Sigma Yellow Belt (SSYB™)', 
+            issuer: 'SCRUMstudy', 
+            certificateId: '636170',
+            verifyUrl: 'https://www.6sigmastudy.com/certification/verify?type=SSYB&number=636170'
+        },
+        { 
+            name: 'Scrum Fundamentals Certified (SFC™)', 
+            issuer: 'SCRUMstudy', 
+            certificateId: '624148',
+            verifyUrl: 'https://www.scrumstudy.com/certification/verify?type=SFC&number=624148'
+        },
+    ],
     connect: [
         {
             url: 'mailto:jennyloz89@gmail.com',
