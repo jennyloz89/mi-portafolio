@@ -22,7 +22,7 @@ export default function App({ Component, pageProps }) {
         <React.Fragment>
           <Head>
             <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <link rel="shortcut icon" href={mainData.favicon.src} />
+            <link rel="shortcut icon" href={mainData.ES.favicon.src} />
           </Head>
           {/* Cursor */}
           <Cursor />
