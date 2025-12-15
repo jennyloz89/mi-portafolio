@@ -69,9 +69,6 @@ const Header = () => {
 								<li className="nav-item">
 									<Link className="nav-link" href="/#portfolio"><i className="bi bi-arrow-right"></i>{currentData.nav.portfolio}</Link>
 								</li>
-								<li className="nav-item">
-									<Link className="nav-link" href="/#awards"><i className="bi bi-arrow-right"></i>{currentData.nav.awards}</Link>
-								</li>
 							</ul>
 						</div>
 					</div> {/* end header-nav */}

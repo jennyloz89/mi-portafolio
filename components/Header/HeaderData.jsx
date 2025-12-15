@@ -5,7 +5,6 @@ export const headerData = {
             about: 'Sobre mí',
             services: 'Servicios',
             portfolio: 'Portafolio',
-            awards: 'Logros',
         }
     },
     EN: {
@@ -14,7 +13,6 @@ export const headerData = {
             about: 'About',
             services: 'Services',
             portfolio: 'Portfolio',
-            awards: 'Awards',
         }
     }
 };

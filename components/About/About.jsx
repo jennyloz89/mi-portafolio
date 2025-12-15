@@ -85,21 +85,16 @@ const About = () => {
                             </ul>
                         </div>
                         <div className="col-12 col-lg-12">
-                            <h6 className="sm-heading">{language === 'ES' ? 'Descargar CV' : 'Download CV'}</h6>
-                            <div className="d-flex gap-2 flex-wrap justify-content-lg-end">
+                            <div className="d-flex align-items-center gap-3 justify-content-lg-end">
+                                <h6 className="sm-heading mb-0">{language === 'ES' ? 'Descargar CV' : 'Download CV'}</h6>
                                 <a 
-                                    href="/CV_Jennifer_Lozano_ES.pdf" 
+                                    href={language === 'ES' ? "/CV_Jennifer_Lozano_ES.pdf" : "/CV_Jennifer_Lozano_EN.pdf"}
                                     download 
-                                    className="btn btn-outline-light btn-sm"
+                                    className="button-circle button-circle-sm"
+                                    aria-label={language === 'ES' ? 'Descargar CV en español' : 'Download CV in English'}
                                 >
-                                    <i className="bi bi-download me-2"></i>Español
-                                </a>
-                                <a 
-                                    href="/CV_Jennifer_Lozano_EN.pdf" 
-                                    download 
-                                    className="btn btn-outline-light btn-sm"
-                                >
-                                    <i className="bi bi-download me-2"></i>English
+                                    <i className="bi bi-download"></i>
+                                    <i className="bi bi-download"></i>
                                 </a>
                             </div>
                         </div>
