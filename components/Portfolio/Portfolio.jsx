@@ -32,23 +32,27 @@ const Portfolio = () => {
         <div id="portfolio" className="section-box">
             <div className="section-sm bg-dark border-radius-1">
                 <div className="container">
-                    <div className="row">
-                        <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-                            <span className="title-heading text-white-04">{currentData.mainData.title}</span>
-                            <h1 className="display-3 fw-medium">{currentData.mainData.title2} <span className="text-gradient">{currentData.mainData.title2Span}</span></h1>
-                            <p>{currentData.mainData.description}</p>
-                            {/* Slider Nav */}
-                            <div className="mt-4">
-                                <button className="swiper-portfolio-prev button-circle cursor-link" onClick={() => sliderRef.current?.slidePrev()} aria-label="Prev Slide">
-                                    <i className="bi bi-arrow-left"></i>
-                                    <i className="bi bi-arrow-left"></i>
-                                </button>
-                                <button className="swiper-portfolio-next button-circle cursor-link" onClick={() => sliderRef.current?.slideNext()} aria-label="Prev Slide">
-                                    <i className="bi bi-arrow-right"></i>
-                                    <i className="bi bi-arrow-right"></i>
-                                </button>
+                    <div className="row mb-4 mb-lg-5">
+                        <div className="col-12">
+                            <div className="d-flex justify-content-between align-items-start flex-wrap gap-3">
+                                <div className="flex-grow-1">
+                                    <span className="title-heading text-white-04 d-block mb-2">{currentData.mainData.title}</span>
+                                    <h1 className="display-3 fw-medium mb-3">{currentData.mainData.title2} <span className="text-gradient">{currentData.mainData.title2Span}</span></h1>
+                                    <p className="mb-0">{currentData.mainData.description}</p>
+                                </div>
+                                {/* Slider Nav */}
+                                <div className="d-flex gap-2">
+                                    <button className="swiper-portfolio-prev button-circle cursor-link" onClick={() => sliderRef.current?.slidePrev()} aria-label="Previous">
+                                        <i className="bi bi-arrow-left"></i>
+                                        <i className="bi bi-arrow-left"></i>
+                                    </button>
+                                    <button className="swiper-portfolio-next button-circle cursor-link" onClick={() => sliderRef.current?.slideNext()} aria-label="Next">
+                                        <i className="bi bi-arrow-right"></i>
+                                        <i className="bi bi-arrow-right"></i>
+                                    </button>
+                                </div>
+                                {/* end Slider Nav */}
                             </div>
-                            {/* end Slider Nav */}
                         </div>
                     </div> {/* end row */}
                     <Swiper
@@ -61,27 +65,20 @@ const Portfolio = () => {
                         slidesPerView={1}
                         spaceBetween={30}
                         breakpoints={{
-                            // when window width is >= 640px
                             640: {
                                 slidesPerView: 1,
-                                spaceBetween: 30,
+                                spaceBetween: 24,
                             },
-                            // when window width is >= 768px
                             768: {
                                 slidesPerView: 2,
+                                spaceBetween: 24,
+                            },
+                            1024: {
+                                slidesPerView: 3,
                                 spaceBetween: 30,
                             },
-                            // when window width is >= 1024px
-                            1024: {
-                                slidesPerView: 2,
-                                spaceBetween: 50,
-                            },
                         }}
-                        autoplay={{
-                            delay: 2500,
-                            disableOnInteraction: false,
-                        }}
-                        className="portfolio-slider mt-4 mt-lg-5"
+                        className="portfolio-slider"
                     >
                         {projects.map((item, index) => (
                             <SwiperSlide key={index}>
@@ -93,18 +90,8 @@ const Portfolio = () => {
                                         </Link>
                                     </div>
                                     <div className="pt-4">
-                                        {/* Categories */}
-                                        <ul className="list-inline-dot sm-heading text-white mb-2">
-                                            {item.categories.map((item, index) => (
-                                                <li key={index}>
-                                                    <Link className="link-hover" href={`portfolio/${item.slug}`}>
-                                                        <span data-text={item.name}>{item.name}</span>
-                                                    </Link>
-                                                </li>
-                                            ))}
-                                        </ul>
                                         {/* Caption */}
-                                        <h2>
+                                        <h2 className="mb-0">
                                             <Link className="portfolio-caption" href={`portfolio/${item.slug}`}>
                                                 <i className="bi bi-arrow-right"></i>
                                                 {item.title}
