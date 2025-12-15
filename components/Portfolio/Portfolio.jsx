@@ -89,15 +89,13 @@ const Portfolio = () => {
                                             <Image src={item.mainImage} alt={item.title} placeholder="blur" />
                                         </Link>
                                     </div>
-                                    <div className="pt-4">
-                                        {/* Caption */}
-                                        <h2 className="mb-0">
-                                            <Link className="portfolio-caption" href={`portfolio/${item.slug}`}>
-                                                <i className="bi bi-arrow-right"></i>
-                                                {item.title}
-                                            </Link>
-                                        </h2>
-                                    </div>
+                                    {/* Caption */}
+                                    <h2 className="mb-0">
+                                        <Link className="portfolio-caption" href={`portfolio/${item.slug}`}>
+                                            <i className="bi bi-arrow-right"></i>
+                                            {item.title}
+                                        </Link>
+                                    </h2>
                                 </div>
                             </SwiperSlide>
                         ))}
