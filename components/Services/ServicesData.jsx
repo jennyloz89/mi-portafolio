@@ -24,6 +24,11 @@ export const servicesData = {
                 title: 'CI/CD & DevOps',
                 description: 'Git/GitHub/GitLab, Jenkins, OCP/Grafana - Integración continua',
             },
+            {
+                bootstrapIcon: 'bi bi-database',
+                title: 'Validación de Bases de Datos',
+                description: 'MySQL, SQL Server, PostgreSQL - Validación de datos e integridad',
+            },
         ]
     },
     EN: {
@@ -50,6 +55,11 @@ export const servicesData = {
                 bootstrapIcon: 'bi bi-rocket-takeoff',
                 title: 'CI/CD & DevOps',
                 description: 'Git/GitHub/GitLab, Jenkins, OCP/Grafana - Continuous integration',
+            },
+            {
+                bootstrapIcon: 'bi bi-database',
+                title: 'Database Validation',
+                description: 'MySQL, SQL Server, PostgreSQL - Data validation and integrity',
             },
         ]
     }
