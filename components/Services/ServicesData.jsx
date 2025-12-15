@@ -7,12 +7,12 @@ export const servicesData = {
             {
                 bootstrapIcon: 'bi bi-robot',
                 title: 'Automatización de Pruebas',
-                description: 'Cypress, Selenium, Playwright - Pruebas E2E y regresión automatizadas',
+                description: 'Cypress, Selenium, Playwright, WebdriverIO, Appium - Pruebas E2E y regresión automatizadas',
             },
             {
                 bootstrapIcon: 'bi bi-wrench',
                 title: 'Testing de APIs',
-                description: 'Postman, Bruno, JMeter, Swagger - Validación de servicios REST',
+                description: 'Postman, JMeter, SoapUI - Validación de servicios REST',
             },
             {
                 bootstrapIcon: 'bi bi-graph-up',
@@ -22,7 +22,7 @@ export const servicesData = {
             {
                 bootstrapIcon: 'bi bi-rocket-takeoff',
                 title: 'CI/CD & DevOps',
-                description: 'Git/GitHub/GitLab, Jenkins, OCP/Grafana - Integración continua',
+                description: 'Git/GitHub/GitLab, Jenkins - Integración continua',
             },
             {
                 bootstrapIcon: 'bi bi-database',
@@ -39,12 +39,12 @@ export const servicesData = {
             {
                 bootstrapIcon: 'bi bi-robot',
                 title: 'Test Automation',
-                description: 'Cypress, Selenium, Playwright - E2E tests and automated regression',
+                description: 'Cypress, Selenium, Playwright, WebdriverIO, Appium - E2E tests and automated regression',
             },
             {
                 bootstrapIcon: 'bi bi-wrench',
                 title: 'API Testing',
-                description: 'Postman, Bruno, JMeter, Swagger - REST services validation',
+                description: 'Postman, JMeter, SoapUI - REST services validation',
             },
             {
                 bootstrapIcon: 'bi bi-graph-up',
@@ -54,7 +54,7 @@ export const servicesData = {
             {
                 bootstrapIcon: 'bi bi-rocket-takeoff',
                 title: 'CI/CD & DevOps',
-                description: 'Git/GitHub/GitLab, Jenkins, OCP/Grafana - Continuous integration',
+                description: 'Git/GitHub/GitLab, Jenkins - Continuous integration',
             },
             {
                 bootstrapIcon: 'bi bi-database',
