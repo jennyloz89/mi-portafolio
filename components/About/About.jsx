@@ -2,36 +2,43 @@ import React from 'react'
 import Image from 'next/image'
 import { aboutData } from './AboutData';
 import Link from 'next/link';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const About = () => {
+    const { language } = useLanguage();
+    const currentData = aboutData[language];
+    const skills = aboutData.skills;
+    const certifications = aboutData.certifications;
+    const connect = aboutData.connect;
+    
     return (
         <div className="container">
             <div className="row g-4 g-md-5">
                 <div className="col-12 col-lg-4 order-lg-2 text-center">
                     {/* Hero Avatar */}
                     <div className="hero-avatar">
-                        <Image src={aboutData.mainData.heroAvatar} alt="hero avatar" placeholder="blur" />
+                        <Image src={currentData.mainData.heroAvatar} alt="hero avatar" placeholder="blur" />
                     </div>
                     {/* end Hero Avatar */}
                 </div>
                 <div className="col-12 col-lg-4 order-lg-1">
                     <div className="row g-4 g-lg-5">
                         <div className="col-12 col-md-4 col-lg-12">
-                            <h6 className="sm-heading">Biography</h6>
-                            <p>{aboutData.mainData.biography}</p>
+                            <h6 className="sm-heading">{language === 'ES' ? 'Biografía' : 'Biography'}</h6>
+                            <p>{currentData.mainData.biography}</p>
                         </div>
                         <div className="col-12 col-md-8 col-lg-12">
-                            <h6 className="sm-heading">🛠️ Technology</h6>
+                            <h6 className="sm-heading">🛠️ {language === 'ES' ? 'Tecnología' : 'Technology'}</h6>
                             <ul className="list-unstyled">
-                                {aboutData.skills.map((item, index) => (
+                                {skills.map((item, index) => (
                                     <li key={index} className="mb-2"><strong>{item.category}:</strong> {item.items}</li>
                                 ))}
                             </ul>
                         </div>
                         <div className="col-12 col-md-8 col-lg-12">
-                            <h6 className="sm-heading">🏆 Certifications</h6>
+                            <h6 className="sm-heading">🏆 {language === 'ES' ? 'Certificaciones' : 'Certifications'}</h6>
                             <ul className="list-unstyled">
-                                {aboutData.certifications.map((cert, index) => (
+                                {certifications.map((cert, index) => (
                                     <li key={index} className="mb-2">
                                         {cert.verifyUrl ? (
                                             <a 
@@ -57,17 +64,17 @@ const About = () => {
                 <div className="col-12 col-md-12 col-lg-4 order-lg-3 text-lg-end">
                     <div className="row g-4 g-lg-5">
                         <div className="col-4 col-lg-12">
-                            <h6 className="sm-heading">Projects Done</h6>
-                            <h1 className="fw-light display-4 mb-0 line-height-110">{aboutData.mainData.projectsDone}</h1>
+                            <h6 className="sm-heading">{language === 'ES' ? 'Proyectos Completados' : 'Projects Done'}</h6>
+                            <h1 className="fw-light display-4 mb-0 line-height-110">{currentData.mainData.projectsDone}</h1>
                         </div>
                         <div className="col-4 col-lg-12">
-                            <h6 className="sm-heading">Years of Experience</h6>
-                            <h1 className="fw-light display-4 mb-0 line-height-110">{aboutData.mainData.yearsOfExperience}+</h1>
+                            <h6 className="sm-heading">{language === 'ES' ? 'Años de Experiencia' : 'Years of Experience'}</h6>
+                            <h1 className="fw-light display-4 mb-0 line-height-110">{currentData.mainData.yearsOfExperience}+</h1>
                         </div>
                         <div className="col-12 col-lg-12 mt-3">
-                            <h6 className="sm-heading">Connect</h6>
+                            <h6 className="sm-heading">{language === 'ES' ? 'Conectar' : 'Connect'}</h6>
                             <ul className="list-inline justify-content-lg-end">
-                                {aboutData.connect.map((item, index) => (
+                                {connect.map((item, index) => (
                                     <li key={index}>
                                         <Link className="button-circle button-circle-sm" href={item.url} aria-label="Social media link">
                                             <i className={item.bootstrapIcon}></i>
@@ -78,17 +85,17 @@ const About = () => {
                             </ul>
                         </div>
                         <div className="col-12 col-lg-12">
-                            <h6 className="sm-heading">Download CV</h6>
+                            <h6 className="sm-heading">{language === 'ES' ? 'Descargar CV' : 'Download CV'}</h6>
                             <div className="d-flex gap-2 flex-wrap justify-content-lg-end">
                                 <a 
-                                    href="/mi-portafolio/CV_Jennifer_Lozano_ES.pdf" 
+                                    href="/CV_Jennifer_Lozano_ES.pdf" 
                                     download 
                                     className="btn btn-outline-light btn-sm"
                                 >
                                     <i className="bi bi-download me-2"></i>Español
                                 </a>
                                 <a 
-                                    href="/mi-portafolio/CV_Jennifer_Lozano_EN.pdf" 
+                                    href="/CV_Jennifer_Lozano_EN.pdf" 
                                     download 
                                     className="btn btn-outline-light btn-sm"
                                 >

@@ -1,14 +1,18 @@
 import Head from 'next/head'
 import { mainData } from '@/lib/data'
-import { About, Awards, Blog, Hero, Portfolio, Services } from '@/components'
+import { About, Awards, Hero, Portfolio, Services } from '@/components'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function Home() {
+    const { language } = useLanguage();
+    const currentMainData = mainData[language];
+    
     return (
         <>
             <Head>
-                <title>{mainData.websiteTitle}</title>
-                <meta name="description" content={mainData.description} />
-                <meta name="keywords" content={mainData.keywords} />
+                <title>{currentMainData.websiteTitle}</title>
+                <meta name="description" content={currentMainData.description} />
+                <meta name="keywords" content={currentMainData.keywords} />
             </Head>
             <main>
                 {/* Hero section */}
@@ -21,8 +25,6 @@ export default function Home() {
                 <Portfolio />
                 {/* Awards section */}
                 <Awards />
-                {/* Blog section */}
-                <Blog />
                 {/* Footer section */}
             </main>
         </>

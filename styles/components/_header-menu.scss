@@ -30,6 +30,10 @@
 			position: relative;
 			display: inline-flex;
 			align-items: center;
+			gap: 12px;
+			.language-toggle {
+				margin-right: 0;
+			}
 			.nav-box {
 				z-index: 991;
 				visibility: hidden;

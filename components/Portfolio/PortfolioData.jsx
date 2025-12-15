@@ -1,15 +1,24 @@
 import PortfolioImg from '@/public/images/portfolio-img.jpg';
-import MainImage from '@/public/images/blog-img-wide.jpg';
 import CypressImage from '@/public/images/cypress-saucedemo.png';
 import ChatbotImage from '@/public/images/chatbot-testing.png';
 import ApiImage from '@/public/images/api-testing.png';
 
 export const portfolioData = {
-    mainData: {
-        title: "Projects",
-        title2: "Recent",
-        title2Span: "Works",
-        description: "Aquí comparto algunos de los proyectos donde he aplicado QA funcional, automatización y validación conversacional. Cada uno refleja mi enfoque en calidad, documentación clara y experiencia de usuario."
+    ES: {
+        mainData: {
+            title: "Proyectos",
+            title2: "Trabajos",
+            title2Span: "Recientes",
+            description: "Aquí comparto algunos de los proyectos donde he aplicado QA funcional, automatización y validación conversacional. Cada uno refleja mi enfoque en calidad, documentación clara y experiencia de usuario."
+        },
+    },
+    EN: {
+        mainData: {
+            title: "Projects",
+            title2: "Recent",
+            title2Span: "Works",
+            description: "Here I share some of the projects where I've applied functional QA, automation, and conversational validation. Each one reflects my focus on quality, clear documentation, and user experience."
+        },
     },
     projects: [
         {
@@ -28,7 +37,7 @@ export const portfolioData = {
             duration: '121 hours',
             content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             mainImage: ChatbotImage,
-            mainImageWide: MainImage,
+            mainImageWide: PortfolioImg,
             images: [
                 { image: PortfolioImg },
                 { image: PortfolioImg },
@@ -55,7 +64,7 @@ export const portfolioData = {
             duration: '121 hours',
             content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             mainImage: ApiImage,
-            mainImageWide: MainImage,
+            mainImageWide: PortfolioImg,
             images: [
                 { image: PortfolioImg },
                 { image: PortfolioImg },
@@ -83,7 +92,7 @@ export const portfolioData = {
             duration: '121 hours',
             content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             mainImage: CypressImage,
-            mainImageWide: MainImage,
+            mainImageWide: PortfolioImg,
             images: [
                 { image: PortfolioImg },
                 { image: PortfolioImg },

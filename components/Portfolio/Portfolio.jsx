@@ -3,9 +3,13 @@ import { portfolioData } from './PortfolioData';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 
 const Portfolio = () => {
+    const { language } = useLanguage();
+    const currentData = portfolioData[language];
+    const projects = portfolioData.projects;
     const prevRef = useRef(null);
     const nextRef = useRef(null);
     const sliderRef = useRef(null);
@@ -30,9 +34,9 @@ const Portfolio = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-                            <span className="title-heading text-white-04">{portfolioData.mainData.title}</span>
-                            <h1 className="display-3 fw-medium">{portfolioData.mainData.title2} <span className="text-gradient">{portfolioData.mainData.title2Span}</span></h1>
-                            <p>{portfolioData.mainData.description}</p>
+                            <span className="title-heading text-white-04">{currentData.mainData.title}</span>
+                            <h1 className="display-3 fw-medium">{currentData.mainData.title2} <span className="text-gradient">{currentData.mainData.title2Span}</span></h1>
+                            <p>{currentData.mainData.description}</p>
                             {/* Slider Nav */}
                             <div className="mt-4">
                                 <button className="swiper-portfolio-prev button-circle cursor-link" onClick={() => sliderRef.current?.slidePrev()} aria-label="Prev Slide">
@@ -79,7 +83,7 @@ const Portfolio = () => {
                         }}
                         className="portfolio-slider mt-4 mt-lg-5"
                     >
-                        {portfolioData.projects.map((item, index) => (
+                        {projects.map((item, index) => (
                             <SwiperSlide key={index}>
                                 <div className="portfolio-box">
                                     {/* Image */}

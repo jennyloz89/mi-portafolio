@@ -1,8 +1,17 @@
 export const awardsData = {
-    mainData: {
-        title: "Achievements",
-        title2: "Awa",
-        title2Span: "rds",
+    ES: {
+        mainData: {
+            title: "Logros",
+            title2: "Pre",
+            title2Span: "mios",
+        },
+    },
+    EN: {
+        mainData: {
+            title: "Achievements",
+            title2: "Awa",
+            title2Span: "rds",
+        },
     },
     awards: [
         {

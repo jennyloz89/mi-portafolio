@@ -1,8 +1,16 @@
 import Favicon from '@/public/images/favicon.png';
 
 export const mainData = {
-    websiteTitle: 'Mone - Personal Portfolio Template',
-    description: 'Personal Portfolio Template',
-    keywords: 'mone, portfolio, vCard',
-    favicon: Favicon,
+    ES: {
+        websiteTitle: 'Jennifer Lozano - Portfolio Personal',
+        description: 'Portfolio Personal - Ingeniera en Sistemas especializada en QA',
+        keywords: 'portfolio, QA, testing, automatización, Jennifer Lozano',
+        favicon: Favicon,
+    },
+    EN: {
+        websiteTitle: 'Jennifer Lozano - Personal Portfolio',
+        description: 'Personal Portfolio - Systems Engineer specialized in QA',
+        keywords: 'portfolio, QA, testing, automation, Jennifer Lozano',
+        favicon: Favicon,
+    },
 };

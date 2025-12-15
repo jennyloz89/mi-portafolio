@@ -6,6 +6,7 @@ import '@/styles/theme.scss'
 import '@/styles/all.min.css'
 import Head from 'next/head'
 import { mainData } from '@/lib/data'
+import { LanguageProvider } from '@/contexts/LanguageContext'
 
 
 export default function App({ Component, pageProps }) {
@@ -16,7 +17,7 @@ export default function App({ Component, pageProps }) {
   }, []);
 
   return (
-    <>
+    <LanguageProvider>
       {loading ? (
         <React.Fragment>
           <Head>
@@ -40,6 +41,6 @@ export default function App({ Component, pageProps }) {
       ) : (
         <LoadingScreen />
       )}
-    </>
+    </LanguageProvider>
   )
 }

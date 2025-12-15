@@ -1,12 +1,23 @@
 import HeroAvatar from '@/public/images/hero-avatar.jpg';
 
 export const aboutData = {
-    mainData: {
-        heroAvatar: HeroAvatar,
-        biography: "Ingeniero en Sistemas con más de 7 años de experiencia en el aseguramiento de la calidad (QA) para aplicaciones web, móviles y APIs. Especialista en pruebas funcionales, automatizadas y de regresión, con liderazgo en equipos ágiles (Scrum/Kanban). Actualmente enfocada en la validación de chatbots, centros de llamadas y sistemas con IA, garantizando experiencias digitales confiables y de alto rendimiento.",
-        projectsDone: "20",
-        yearsOfExperience: "7",
-        worldwideClients: "50",
+    ES: {
+        mainData: {
+            heroAvatar: HeroAvatar,
+            biography: "Ingeniero en Sistemas con más de 7 años de experiencia en el aseguramiento de la calidad (QA) para aplicaciones web, móviles y APIs. Especialista en pruebas funcionales, automatizadas y de regresión, con liderazgo en equipos ágiles (Scrum/Kanban). Actualmente enfocada en la validación de chatbots, centros de llamadas y sistemas con IA, garantizando experiencias digitales confiables y de alto rendimiento.",
+            projectsDone: "20",
+            yearsOfExperience: "7",
+            worldwideClients: "50",
+        },
+    },
+    EN: {
+        mainData: {
+            heroAvatar: HeroAvatar,
+            biography: "Systems Engineer with over 7 years of experience in quality assurance (QA) for web, mobile, and API applications. Specialist in functional, automated, and regression testing, with leadership in agile teams (Scrum/Kanban). Currently focused on validating chatbots, call centers, and AI systems, ensuring reliable and high-performance digital experiences.",
+            projectsDone: "20",
+            yearsOfExperience: "7",
+            worldwideClients: "50",
+        },
     },
     skills: [
         { category: 'Automation', items: 'Cypress, WebdriverIO, Appium, Selenium, Postman, JMeter' },
