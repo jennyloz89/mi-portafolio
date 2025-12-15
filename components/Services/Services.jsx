@@ -12,6 +12,7 @@ const Services = () => {
     const prevRef = useRef(null);
     const nextRef = useRef(null);
     const sliderRef = useRef(null);
+    const sliderContainerRef = useRef(null);
 
     const updateNavigation = (swiper) => {
         if (prevRef.current && nextRef.current) {
@@ -21,9 +22,42 @@ const Services = () => {
         }
     };
 
+    const updateFadeGradients = (swiper) => {
+        if (!sliderContainerRef.current) return;
+        
+        const container = sliderContainerRef.current;
+        const isAtStart = swiper.isBeginning;
+        const isAtEnd = swiper.isEnd;
+
+        if (isAtStart) {
+            container.style.setProperty('--fade-left-opacity', '0');
+        } else {
+            container.style.setProperty('--fade-left-opacity', '1');
+        }
+
+        if (isAtEnd) {
+            container.style.setProperty('--fade-right-opacity', '0');
+        } else {
+            container.style.setProperty('--fade-right-opacity', '1');
+        }
+    };
+
     useEffect(() => {
         if (sliderRef.current) {
             updateNavigation(sliderRef.current);
+            updateFadeGradients(sliderRef.current);
+            
+            sliderRef.current.on('slideChange', () => {
+                updateFadeGradients(sliderRef.current);
+            });
+            
+            sliderRef.current.on('reachBeginning', () => {
+                updateFadeGradients(sliderRef.current);
+            });
+            
+            sliderRef.current.on('reachEnd', () => {
+                updateFadeGradients(sliderRef.current);
+            });
         }
     }, []);
     
@@ -56,36 +90,47 @@ const Services = () => {
                                 </button>
                             </div>
                         </div>
-                        <Swiper
-                            modules={[Navigation]}
-                            onSwiper={(swiper) => {
-                                sliderRef.current = swiper;
-                                swiper.on('init', () => {
-                                    updateNavigation(swiper);
-                                });
-                            }}
-                            slidesPerView={1}
-                            spaceBetween={30}
-                            breakpoints={{
-                                640: {
-                                    slidesPerView: 2,
-                                    spaceBetween: 30,
-                                },
-                                768: {
-                                    slidesPerView: 3,
-                                    spaceBetween: 30,
-                                },
-                                1024: {
-                                    slidesPerView: 4,
-                                    spaceBetween: 30,
-                                },
-                                1200: {
-                                    slidesPerView: 5,
-                                    spaceBetween: 30,
-                                },
-                            }}
-                            className="services-slider"
-                        >
+                        <div ref={sliderContainerRef} className="services-slider-wrapper">
+                            <Swiper
+                                modules={[Navigation]}
+                                onSwiper={(swiper) => {
+                                    sliderRef.current = swiper;
+                                    swiper.on('init', () => {
+                                        updateNavigation(swiper);
+                                        updateFadeGradients(swiper);
+                                    });
+                                }}
+                                onSlideChange={(swiper) => {
+                                    updateFadeGradients(swiper);
+                                }}
+                                onReachBeginning={(swiper) => {
+                                    updateFadeGradients(swiper);
+                                }}
+                                onReachEnd={(swiper) => {
+                                    updateFadeGradients(swiper);
+                                }}
+                                slidesPerView={1}
+                                spaceBetween={30}
+                                breakpoints={{
+                                    640: {
+                                        slidesPerView: 2,
+                                        spaceBetween: 30,
+                                    },
+                                    768: {
+                                        slidesPerView: 3,
+                                        spaceBetween: 30,
+                                    },
+                                    1024: {
+                                        slidesPerView: 4,
+                                        spaceBetween: 30,
+                                    },
+                                    1200: {
+                                        slidesPerView: 5,
+                                        spaceBetween: 30,
+                                    },
+                                }}
+                                className="services-slider"
+                            >
                             {currentData.services.map((item, index) => (
                                 <SwiperSlide key={index}>
                                     <div className="service-card-horizontal">
@@ -97,7 +142,8 @@ const Services = () => {
                                     </div>
                                 </SwiperSlide>
                             ))}
-                        </Swiper>
+                            </Swiper>
+                        </div>
                     </div>
                 </div>
             </div>
