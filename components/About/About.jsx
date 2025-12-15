@@ -7,7 +7,6 @@ import { useLanguage } from '@/contexts/LanguageContext';
 const About = () => {
     const { language } = useLanguage();
     const currentData = aboutData[language];
-    const skills = aboutData.skills;
     const certifications = aboutData.certifications;
     const connect = aboutData.connect;
     
@@ -26,14 +25,6 @@ const About = () => {
                         <div className="col-12 col-md-4 col-lg-12">
                             <h6 className="sm-heading">{language === 'ES' ? 'Biografía' : 'Biography'}</h6>
                             <p>{currentData.mainData.biography}</p>
-                        </div>
-                        <div className="col-12 col-md-8 col-lg-12">
-                            <h6 className="sm-heading">🛠️ {language === 'ES' ? 'Tecnología' : 'Technology'}</h6>
-                            <ul className="list-unstyled">
-                                {skills.map((item, index) => (
-                                    <li key={index} className="mb-2"><strong>{item.category}:</strong> {item.items}</li>
-                                ))}
-                            </ul>
                         </div>
                         <div className="col-12 col-md-8 col-lg-12">
                             <h6 className="sm-heading">🏆 {language === 'ES' ? 'Certificaciones' : 'Certifications'}</h6>
