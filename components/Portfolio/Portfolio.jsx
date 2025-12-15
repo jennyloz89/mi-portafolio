@@ -13,6 +13,7 @@ const Portfolio = () => {
     const prevRef = useRef(null);
     const nextRef = useRef(null);
     const sliderRef = useRef(null);
+    const sliderContainerRef = useRef(null);
 
     const updateNavigation = (swiper) => {
         if (prevRef.current && nextRef.current) {
@@ -22,9 +23,42 @@ const Portfolio = () => {
         }
     };
 
+    const updateFadeGradients = (swiper) => {
+        if (!sliderContainerRef.current) return;
+        
+        const container = sliderContainerRef.current;
+        const isAtStart = swiper.isBeginning;
+        const isAtEnd = swiper.isEnd;
+
+        if (isAtStart) {
+            container.style.setProperty('--fade-left-opacity', '0');
+        } else {
+            container.style.setProperty('--fade-left-opacity', '1');
+        }
+
+        if (isAtEnd) {
+            container.style.setProperty('--fade-right-opacity', '0');
+        } else {
+            container.style.setProperty('--fade-right-opacity', '1');
+        }
+    };
+
     useEffect(() => {
         if (sliderRef.current) {
             updateNavigation(sliderRef.current);
+            updateFadeGradients(sliderRef.current);
+            
+            sliderRef.current.on('slideChange', () => {
+                updateFadeGradients(sliderRef.current);
+            });
+            
+            sliderRef.current.on('reachBeginning', () => {
+                updateFadeGradients(sliderRef.current);
+            });
+            
+            sliderRef.current.on('reachEnd', () => {
+                updateFadeGradients(sliderRef.current);
+            });
         }
     }, []);
 
@@ -55,31 +89,42 @@ const Portfolio = () => {
                             </div>
                         </div>
                     </div> {/* end row */}
-                    <Swiper
-                        onSwiper={(swiper) => {
-                            sliderRef.current = swiper;
-                            swiper.on('init', () => {
-                                updateNavigation(swiper);
-                            });
-                        }}
-                        slidesPerView={1}
-                        spaceBetween={30}
-                        breakpoints={{
-                            640: {
-                                slidesPerView: 1,
-                                spaceBetween: 24,
-                            },
-                            768: {
-                                slidesPerView: 2,
-                                spaceBetween: 24,
-                            },
-                            1024: {
-                                slidesPerView: 3,
-                                spaceBetween: 30,
-                            },
-                        }}
-                        className="portfolio-slider"
-                    >
+                    <div ref={sliderContainerRef} className="portfolio-slider-wrapper">
+                        <Swiper
+                            onSwiper={(swiper) => {
+                                sliderRef.current = swiper;
+                                swiper.on('init', () => {
+                                    updateNavigation(swiper);
+                                    updateFadeGradients(swiper);
+                                });
+                            }}
+                            onSlideChange={(swiper) => {
+                                updateFadeGradients(swiper);
+                            }}
+                            onReachBeginning={(swiper) => {
+                                updateFadeGradients(swiper);
+                            }}
+                            onReachEnd={(swiper) => {
+                                updateFadeGradients(swiper);
+                            }}
+                            slidesPerView={1}
+                            spaceBetween={30}
+                            breakpoints={{
+                                640: {
+                                    slidesPerView: 1,
+                                    spaceBetween: 24,
+                                },
+                                768: {
+                                    slidesPerView: 2,
+                                    spaceBetween: 24,
+                                },
+                                1024: {
+                                    slidesPerView: 3,
+                                    spaceBetween: 30,
+                                },
+                            }}
+                            className="portfolio-slider"
+                        >
                         {projects.map((item, index) => (
                             <SwiperSlide key={index}>
                                 <div className="portfolio-box">
@@ -99,7 +144,8 @@ const Portfolio = () => {
                                 </div>
                             </SwiperSlide>
                         ))}
-                    </Swiper>
+                        </Swiper>
+                    </div>
                 </div> {/* end container */}
             </div>
         </div>

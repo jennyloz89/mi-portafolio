@@ -81,9 +81,35 @@
 		}
 	}
 }
+.portfolio-slider-wrapper {
+	position: relative;
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 80px;
+		z-index: 10;
+		pointer-events: none;
+		opacity: 0;
+		@include transition(opacity 0.3s);
+	}
+	&::before {
+		left: 0;
+		background: linear-gradient(to right, $color-dark 0%, rgba(24, 26, 28, 0.9) 40%, transparent 100%);
+		opacity: var(--fade-left-opacity, 0);
+	}
+	&::after {
+		right: 0;
+		background: linear-gradient(to left, $color-dark 0%, rgba(24, 26, 28, 0.9) 40%, transparent 100%);
+		opacity: var(--fade-right-opacity, 0);
+	}
+}
+
 .portfolio-slider {
 	&.swiper, &.swiper-container {
-		overflow: visible;
+		overflow: hidden;
 	}
 }
 .swiper-portfolio-prev {
