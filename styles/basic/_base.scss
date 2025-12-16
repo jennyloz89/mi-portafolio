@@ -69,6 +69,10 @@ img {
 }
 
 .hero-avatar {
+	margin-top: -40px;
+	@include breakpoint-above(lg) {
+		margin-top: -60px;
+	}
 	img {
 		width: 320px;
 		height: 320px;
@@ -81,12 +85,14 @@ img {
 		}
 	}
 	@include breakpoint-less(md) {
+		margin-top: -30px;
 		img {
 			width: 270px;
 			height: 270px;
 		}
 	}
 	@include breakpoint-less(sm) {
+		margin-top: -20px;
 		img {
 			width: 240px;
 			height: 240px;
@@ -124,22 +130,22 @@ img {
 
 .section {
 	overflow: hidden;
-	padding: 100px 0;
-	margin-top: 40px;
+	padding: 60px 0;
+	margin-top: 20px;
 }
 .section-sm {
 	overflow: hidden;
-	padding: 80px 0;
-	margin-top: 30px;
+	padding: 50px 0;
+	margin-top: 15px;
 }
 @include breakpoint-less(lg) {
 	.section {
-		padding: 80px 0;
-		margin-top: 30px;
+		padding: 50px 0;
+		margin-top: 15px;
 	}
 	.section-sm {
-		padding: 60px 0;
-		margin-top: 20px;
+		padding: 40px 0;
+		margin-top: 10px;
 	}
 }
 

@@ -52,7 +52,7 @@ const About = () => {
                         </div>
                     </div> {/* end row(inner) */}
                 </div>
-                <div className="col-12 col-md-12 col-lg-4 order-lg-3 text-lg-end">
+                <div className="col-12 col-md-12 col-lg-4 order-lg-3 text-center text-lg-center">
                     <div className="row g-4 g-lg-5">
                         <div className="col-4 col-lg-12">
                             <h6 className="sm-heading">{language === 'ES' ? 'Proyectos Completados' : 'Projects Done'}</h6>
@@ -64,7 +64,7 @@ const About = () => {
                         </div>
                         <div className="col-12 col-lg-12 mt-3">
                             <h6 className="sm-heading">{language === 'ES' ? 'Conectar' : 'Connect'}</h6>
-                            <ul className="list-inline justify-content-lg-end">
+                            <ul className="list-inline justify-content-center">
                                 {connect.map((item, index) => (
                                     <li key={index}>
                                         <Link className="button-circle button-circle-sm" href={item.url} aria-label="Social media link">
@@ -76,7 +76,7 @@ const About = () => {
                             </ul>
                         </div>
                         <div className="col-12 col-lg-12">
-                            <div className="d-flex align-items-center gap-3 justify-content-lg-end">
+                            <div className="d-flex align-items-center gap-3 justify-content-center">
                                 <h6 className="sm-heading mb-0">{language === 'ES' ? 'Descargar CV' : 'Download CV'}</h6>
                                 <a 
                                     href={language === 'ES' ? "/CV_Jennifer_Lozano_ES.pdf" : "/CV_Jennifer_Lozano_EN.pdf"}

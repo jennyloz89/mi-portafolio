@@ -139,12 +139,12 @@
 // Reduce padding for portfolio navigation section
 .section-box .section-sm {
 	&.bg-dark {
-		padding: 40px 0;
+		padding: 20px 0;
 		@include breakpoint-less(lg) {
-			padding: 30px 0;
+			padding: 18px 0;
 		}
 		@include breakpoint-less(md) {
-			padding: 25px 0;
+			padding: 15px 0;
 		}
 	}
 }
