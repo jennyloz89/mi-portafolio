@@ -101,10 +101,10 @@ export const portfolioData = {
             ],
         },
         {
-            title: 'Mi Portafolio QA Analyst',
+            title: 'Mi Portafolio QA',
             slug: 'mi-portafolio',
             githubUrl: 'https://github.com/jennyloz89/mi-portafolio',
-            description: 'Portafolio personal desarrollado con Next.js que muestra mi experiencia como QA Analyst. Incluye secciones de servicios, proyectos, automatización de pruebas, testing de APIs y metodologías ágiles. Implementa internacionalización (ES/EN), diseño responsive y navegación fluida con efectos visuales modernos.',
+            description: 'Portafolio personal desarrollado con Next.js que muestra mi experiencia como QA. Incluye secciones de servicios, proyectos, automatización de pruebas, testing de APIs y metodologías ágiles. Implementa internacionalización (ES/EN), diseño responsive y navegación fluida con efectos visuales modernos.',
             services: [
                 { name: 'Next.js' },
                 { name: 'React' },

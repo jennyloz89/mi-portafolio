@@ -30,7 +30,7 @@ const ProjectPage = ({ project, prevProject, nextProject }) => {
                                 <p>{project.description}</p>
                             </div>
                         </div> {/* end row */}
-                        <div className="row g-4 mt-5">
+                        <div className="row g-4 mt-5 justify-content-center">
                             <div className="col-12 col-md-6 col-lg-3">
                                 <div className="fancy-box">
                                     <h6 className="sm-heading mb-1">Services:</h6>
