@@ -119,21 +119,39 @@
 // Center content in fancy-box on portfolio detail page
 .section .fancy-box {
 	text-align: center !important;
+	* {
+		text-align: center !important;
+	}
 	.sm-heading {
 		text-align: center !important;
 	}
 	p {
 		text-align: center !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
 	}
 	ul.list-inline-dot {
 		display: flex !important;
 		justify-content: center !important;
+		align-items: center !important;
 		flex-wrap: wrap;
+		width: 100% !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
+		padding-left: 0 !important;
+		li {
+			text-align: center !important;
+		}
 	}
 	.link-hover {
 		text-align: center !important;
 		display: inline-block;
-		margin: 0 auto;
+		margin: 0 auto !important;
+	}
+	a {
+		text-align: center !important;
+		display: inline-block;
+		margin: 0 auto !important;
 	}
 }
 
