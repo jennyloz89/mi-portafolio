@@ -7,8 +7,8 @@ const Hero = () => {
             <div className="container text-center">
                 <div className="row">
                     <div className="col-12">
-                        <h1 className="hero-heading display-1 fw-bold mb-0 stroke-text">
-                            {heroData.mainData.name}
+                        <h1 className="hero-heading display-1 fw-bold mb-0">
+                            <span className="text-gradient">{heroData.mainData.name}</span>
                         </h1>
                     </div>
                 </div>

@@ -19,6 +19,40 @@ export const portfolioData = {
     },
     projects: [
         {
+            slug: 'chatbot-validation',
+            icon: 'bi bi-chat-dots',
+            ES: {
+                title: 'Chatbot Validation – Educational Flow Testing',
+                description: 'Validación manual de flujos educativos en chatbot mediante pruebas funcionales exhaustivas. Este proyecto incluye la creación de casos de prueba, ejecución de pruebas manuales, validación de respuestas del chatbot, verificación de flujos conversacionales y documentación completa con evidencias (screenshots, logs y reportes detallados). Enfoque en calidad de experiencia conversacional y cobertura de escenarios educativos.',
+                content: 'Proyecto de validación de chatbot enfocado en flujos educativos. Se realizaron pruebas manuales exhaustivas para validar la funcionalidad, usabilidad y precisión de las respuestas del chatbot en diferentes escenarios educativos. El proyecto incluye documentación completa con evidencias visuales, casos de prueba detallados y reportes de hallazgos.',
+                client: 'Personal',
+                projectLink: {
+                    title: 'Ver Documentación',
+                    url: '#'
+                },
+            },
+            EN: {
+                title: 'Chatbot Validation – Educational Flow Testing',
+                description: 'Manual validation of educational flows in chatbot through comprehensive functional testing. This project includes test case creation, manual test execution, chatbot response validation, conversational flow verification, and complete documentation with evidence (screenshots, logs, and detailed reports). Focus on conversational experience quality and educational scenario coverage.',
+                content: 'Chatbot validation project focused on educational flows. Comprehensive manual testing was performed to validate functionality, usability, and accuracy of chatbot responses across different educational scenarios. The project includes complete documentation with visual evidence, detailed test cases, and findings reports.',
+                client: 'Personal',
+                projectLink: {
+                    title: 'View Documentation',
+                    url: '#'
+                },
+            },
+            services: [
+                { name: 'Manual Testing' },
+                { name: 'Chatbot QA' },
+                { name: 'Documentation' },
+            ],
+            categories: [
+                { name: 'Manual Testing' },
+                { name: 'Chatbot Validation' },
+                { name: 'Educational Technology' }
+            ],
+        },
+        {
             slug: 'third',
             githubUrl: 'https://github.com/jennyloz89/cypress-login-saucedemo',
             icon: 'bi bi-shield-check',
@@ -97,6 +131,8 @@ export const portfolioData = {
             githubRepository: 'Repositorio GitHub',
             projectLink: 'Enlace del proyecto',
             viewOnGitHub: 'Ver en GitHub',
+            documentation: 'Documentación',
+            viewDocumentation: 'Ver Documentación',
         },
         EN: {
             prev: 'Prev',
@@ -106,6 +142,8 @@ export const portfolioData = {
             githubRepository: 'GitHub Repository',
             projectLink: 'Project link',
             viewOnGitHub: 'View on GitHub',
+            documentation: 'Documentation',
+            viewDocumentation: 'View Documentation',
         },
     }
 };

@@ -122,6 +122,15 @@
 //
 .text-gradient {
 	background: -webkit-linear-gradient(45deg, #ff82f3 0%, #7b13ff 50%, #400d64 100%);
+	background: linear-gradient(45deg, #ff82f3 0%, #7b13ff 50%, #400d64 100%);
 	-webkit-background-clip: text;
+	background-clip: text;
 	-webkit-text-fill-color: transparent;
+	text-fill-color: transparent;
+	
+	// Para elementos dentro de stroke-text
+	.stroke-text & {
+		-webkit-text-stroke-width: 0;
+		text-stroke-width: 0;
+	}
 }
