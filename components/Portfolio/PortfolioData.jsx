@@ -1,4 +1,4 @@
-import PortfolioImg from '@/public/images/portfolio-img.jpg';
+import PortfolioImg from '@/public/images/portfolio-img.png';
 import CypressImage from '@/public/images/cypress-saucedemo.png';
 import ChatbotImage from '@/public/images/chatbot-testing.png';
 import ApiImage from '@/public/images/api-testing.png';
@@ -34,8 +34,7 @@ export const portfolioData = {
                 title: 'www.flatheme.net',
                 url: 'https://www.flatheme.net'
             },
-            duration: '121 hours',
-            content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+            content: '',
             mainImage: ChatbotImage,
             mainImageWide: PortfolioImg,
             images: [
@@ -61,8 +60,7 @@ export const portfolioData = {
                 title: 'www.flatheme.net',
                 url: 'https://www.flatheme.net'
             },
-            duration: '121 hours',
-            content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+            content: '',
             mainImage: ApiImage,
             mainImageWide: PortfolioImg,
             images: [
@@ -76,21 +74,20 @@ export const portfolioData = {
             ],
         },
         {
-            title: 'Cypress Login – SauceDemo',
+            title: 'Cypress E2E – SauceDemo',
             slug: 'third',
             githubUrl: 'https://github.com/jennyloz89/cypress-login-saucedemo',
             description: 'Automatización de login en SauceDemo usando Cypress y buenas prácticas de QA. Este proyecto demuestra cómo validar el flujo de autenticación con credenciales válidas e inválidas, navegación al dashboard, verificación de elementos visibles y uso de fixtures para datos de prueba. Incluye Page Object Model (POM), comandos personalizados reutilizables y reportes con screenshots para trazabilidad.',
             services: [
-                { name: 'List item' },
-                { name: 'List item' },
+                { name: 'JavaScript' },
+                { name: 'Cypress' },
             ],
-            client: 'FlaTheme',
+            client: 'Personal',
             projectLink: {
                 title: 'www.flatheme.net',
                 url: 'https://www.flatheme.net'
             },
-            duration: '121 hours',
-            content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+            content: '',
             mainImage: CypressImage,
             mainImageWide: PortfolioImg,
             images: [
@@ -118,7 +115,6 @@ export const portfolioData = {
                 title: 'GitHub Repository',
                 url: 'https://github.com/jennyloz89/mi-portafolio'
             },
-            duration: 'Ongoing',
             content: 'Portafolio personal desarrollado con Next.js que demuestra mis habilidades técnicas y experiencia profesional. El proyecto incluye implementación de internacionalización para soportar español e inglés, diseño responsive optimizado para diferentes dispositivos, y una interfaz moderna con efectos de desvanecimiento y navegación suave.',
             mainImage: PortfolioImg,
             mainImageWide: PortfolioImg,

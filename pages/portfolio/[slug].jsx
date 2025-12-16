@@ -68,12 +68,6 @@ const ProjectPage = ({ project, prevProject, nextProject }) => {
                                     )}
                                 </div>
                             </div>
-                            <div className="col-12 col-md-6 col-lg-3">
-                                <div className="fancy-box">
-                                    <h6 className="sm-heading mb-1">Duration:</h6>
-                                    <p>{project.duration}</p>
-                                </div>
-                            </div>
                         </div> {/* end row */}
                     </div> {/* end container */}
                 </div>
@@ -81,40 +75,34 @@ const ProjectPage = ({ project, prevProject, nextProject }) => {
                 <div className="section-box">
                     <div className="section-sm bg-dark border-radius-1">
                         <div className="container">
-                            {/* Text */}
-                            <div className="row">
-                                <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-                                    <div dangerouslySetInnerHTML={{ __html: project.content }} />
-                                </div>
-                            </div> {/* end row */}
                             {/* Navigation */}
-                            <div className="row mt-5">
-                                    {prevProject ? (
-                                        <div className="col-6">
-                                            <Link href={`/portfolio/${prevProject.slug}`} className="button">
-                                                <span data-text="Prev Project">Prev Project</span>
-                                            </Link>
-                                        </div>
-                                    ) : (
-                                        <div className="col-6">
-                                            <button className="button btn-disabled" disabled>
-                                                <span data-text="Prev Project">Prev Project</span>
-                                            </button>
-                                        </div>
-                                    )}
-                                    {nextProject ? (
-                                        <div className="col-6 text-end">
-                                            <Link href={`/portfolio/${nextProject.slug}`} className="button">
-                                                <span data-text="Next Project">Next Project</span>
-                                            </Link>
-                                        </div>
-                                    ) : (
-                                        <div className="col-6 text-end">
-                                            <button className="button btn-disabled" disabled>
-                                                <span data-text="Next Project">Next Project</span>
-                                            </button>
-                                        </div>
-                                    )}
+                            <div className="row">
+                                {prevProject ? (
+                                    <div className="col-6">
+                                        <Link href={`/portfolio/${prevProject.slug}`} className="button">
+                                            <span data-text="Prev Project">Prev Project</span>
+                                        </Link>
+                                    </div>
+                                ) : (
+                                    <div className="col-6">
+                                        <button className="button btn-disabled" disabled>
+                                            <span data-text="Prev Project">Prev Project</span>
+                                        </button>
+                                    </div>
+                                )}
+                                {nextProject ? (
+                                    <div className="col-6 text-end">
+                                        <Link href={`/portfolio/${nextProject.slug}`} className="button">
+                                            <span data-text="Next Project">Next Project</span>
+                                        </Link>
+                                    </div>
+                                ) : (
+                                    <div className="col-6 text-end">
+                                        <button className="button btn-disabled" disabled>
+                                            <span data-text="Next Project">Next Project</span>
+                                        </button>
+                                    </div>
+                                )}
                             </div>
                         </div> {/* end container */}
                     </div>
