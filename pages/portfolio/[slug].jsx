@@ -2,22 +2,26 @@ import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link';
 import { portfolioData } from '@/components/Portfolio/PortfolioData';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const ProjectPage = ({ project, prevProject, nextProject }) => {
+    const { language } = useLanguage();
+    const currentProject = project[language];
+    const navTexts = portfolioData.navigation[language];
 
     const getLastWord = (str) => {
         const words = str.split(' ');
         return words[words.length - 1];
     };
 
-    // Get the last word from project.title
-    const lastWord = getLastWord(project.title);
+    // Get the last word from project title
+    const lastWord = getLastWord(currentProject.title);
 
     return (
         <>
             <Head>
-                <title>{project.title}</title>
-                <meta name="description" content={project.description} />
+                <title>{currentProject.title}</title>
+                <meta name="description" content={currentProject.description} />
                 <meta name="keywords" content={project.keywords} />
             </Head>
 
@@ -26,14 +30,14 @@ const ProjectPage = ({ project, prevProject, nextProject }) => {
                     <div className="container">
                         <div className="row">
                             <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-                                <h1 className="display-3 fw-medium">{project.title.replace(lastWord, '')} <span className="text-gradient">{lastWord}</span></h1>
-                                <p>{project.description}</p>
+                                <h1 className="display-3 fw-medium">{currentProject.title.replace(lastWord, '')} <span className="text-gradient">{lastWord}</span></h1>
+                                <p>{currentProject.description}</p>
                             </div>
                         </div> {/* end row */}
                         <div className="row g-4 mt-5 justify-content-center">
                             <div className="col-12 col-md-6 col-lg-3">
                                 <div className="fancy-box">
-                                    <h6 className="sm-heading mb-1">Services:</h6>
+                                    <h6 className="sm-heading mb-1">{navTexts.services}:</h6>
                                     <ul className="list-inline-dot">
                                         {project.services.map((item, index) => (
                                             <li key={index}>
@@ -45,24 +49,24 @@ const ProjectPage = ({ project, prevProject, nextProject }) => {
                             </div>
                             <div className="col-12 col-md-6 col-lg-3">
                                 <div className="fancy-box">
-                                    <h6 className="sm-heading mb-1">Client:</h6>
-                                    <p>{project.client}</p>
+                                    <h6 className="sm-heading mb-1">{navTexts.client}:</h6>
+                                    <p>{currentProject.client}</p>
                                 </div>
                             </div>
                             <div className="col-12 col-md-6 col-lg-3">
                                 <div className="fancy-box">
                                     {project.githubUrl ? (
                                         <>
-                                            <h6 className="sm-heading mb-1">GitHub Repository:</h6>
+                                            <h6 className="sm-heading mb-1">{navTexts.githubRepository}:</h6>
                                             <a className="link-hover" href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                                                <span data-text="Ver en GitHub">Ver en GitHub</span>
+                                                <span data-text={navTexts.viewOnGitHub}>{navTexts.viewOnGitHub}</span>
                                             </a>
                                         </>
                                     ) : (
                                         <>
-                                            <h6 className="sm-heading mb-1">Project link:</h6>
-                                            <Link className="link-hover" href={project.projectLink.url}>
-                                                <span data-text={project.projectLink.title}>{project.projectLink.title}</span>
+                                            <h6 className="sm-heading mb-1">{navTexts.projectLink}:</h6>
+                                            <Link className="link-hover" href={currentProject.projectLink.url}>
+                                                <span data-text={currentProject.projectLink.title}>{currentProject.projectLink.title}</span>
                                             </Link>
                                         </>
                                     )}
@@ -80,26 +84,26 @@ const ProjectPage = ({ project, prevProject, nextProject }) => {
                                 {prevProject ? (
                                     <div className="col-6">
                                         <Link href={`/portfolio/${prevProject.slug}`} className="button">
-                                            <span data-text="Prev Project">Prev Project</span>
+                                            <span data-text={navTexts.prev}>{navTexts.prev}</span>
                                         </Link>
                                     </div>
                                 ) : (
                                     <div className="col-6">
                                         <button className="button btn-disabled" disabled>
-                                            <span data-text="Prev Project">Prev Project</span>
+                                            <span data-text={navTexts.prev}>{navTexts.prev}</span>
                                         </button>
                                     </div>
                                 )}
                                 {nextProject ? (
                                     <div className="col-6 text-end">
                                         <Link href={`/portfolio/${nextProject.slug}`} className="button">
-                                            <span data-text="Next Project">Next Project</span>
+                                            <span data-text={navTexts.next}>{navTexts.next}</span>
                                         </Link>
                                     </div>
                                 ) : (
                                     <div className="col-6 text-end">
                                         <button className="button btn-disabled" disabled>
-                                            <span data-text="Next Project">Next Project</span>
+                                            <span data-text={navTexts.next}>{navTexts.next}</span>
                                         </button>
                                     </div>
                                 )}

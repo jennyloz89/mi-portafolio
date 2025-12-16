@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { portfolioData } from './PortfolioData';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { useLanguage } from '@/contexts/LanguageContext';
 
@@ -128,17 +127,19 @@ const Portfolio = () => {
                         {projects.map((item, index) => (
                             <SwiperSlide key={index}>
                                 <div className="portfolio-box">
-                                    {/* Image */}
+                                    {/* Icon */}
                                     <div className="portfolio-img">
                                         <Link href={`portfolio/${item.slug}`}>
-                                            <Image src={item.mainImage} alt={item.title} placeholder="blur" />
+                                            <div className="portfolio-icon-wrapper">
+                                                <i className={item.icon}></i>
+                                            </div>
                                         </Link>
                                     </div>
                                     {/* Caption */}
                                     <h2 className="mb-0">
                                         <Link className="portfolio-caption" href={`portfolio/${item.slug}`}>
                                             <i className="bi bi-arrow-right"></i>
-                                            {item.title}
+                                            {item[language].title}
                                         </Link>
                                     </h2>
                                 </div>
