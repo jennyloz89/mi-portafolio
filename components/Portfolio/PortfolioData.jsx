@@ -53,6 +53,40 @@ export const portfolioData = {
             ],
         },
         {
+            slug: 'api-rest-postman-newman',
+            icon: 'bi bi-code-slash',
+            ES: {
+                title: 'API REST Testing – Postman & Newman',
+                description: 'Automatización de pruebas de APIs REST utilizando Postman para diseño y ejecución de colecciones de pruebas, integración con Newman para ejecución en línea de comandos (CLI) y configuración de pipelines CI/CD. Este proyecto incluye validación de endpoints, verificación de respuestas HTTP, manejo de autenticación, pruebas de carga y generación de reportes automatizados para integración continua.',
+                content: 'Proyecto de automatización de pruebas de APIs REST que demuestra la integración de Postman con Newman para ejecutar pruebas automatizadas en entornos de CI/CD. Incluye colecciones de Postman bien estructuradas, scripts de pre-request y test, configuración de variables de entorno, ejecución mediante CLI y generación de reportes HTML/JSON para análisis de resultados.',
+                client: 'Personal',
+                projectLink: {
+                    title: 'Repositorio GitHub',
+                    url: 'https://github.com/jennyloz89/qa-api-postman'
+                },
+            },
+            EN: {
+                title: 'REST API Testing – Postman & Newman',
+                description: 'REST API test automation using Postman for test collection design and execution, integration with Newman for command-line interface (CLI) execution, and CI/CD pipeline configuration. This project includes endpoint validation, HTTP response verification, authentication handling, load testing, and automated report generation for continuous integration.',
+                content: 'REST API test automation project demonstrating Postman integration with Newman for running automated tests in CI/CD environments. Includes well-structured Postman collections, pre-request and test scripts, environment variable configuration, CLI execution, and HTML/JSON report generation for results analysis.',
+                client: 'Personal',
+                projectLink: {
+                    title: 'GitHub Repository',
+                    url: 'https://github.com/jennyloz89/qa-api-postman'
+                },
+            },
+            services: [
+                { name: 'Postman' },
+                { name: 'Newman' },
+                { name: 'CI/CD' },
+            ],
+            categories: [
+                { name: 'API Testing' },
+                { name: 'Test Automation' },
+                { name: 'CI/CD' }
+            ],
+        },
+        {
             slug: 'third',
             githubUrl: 'https://github.com/jennyloz89/cypress-login-saucedemo',
             icon: 'bi bi-shield-check',

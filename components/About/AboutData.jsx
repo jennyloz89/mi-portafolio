@@ -27,6 +27,12 @@ export const aboutData = {
     ],
     certifications: [
         { 
+            name: 'ISTQB Foundation Level', 
+            issuer: 'ISTQB', 
+            certificateId: '',
+            verifyUrl: null
+        },
+        { 
             name: 'Six Sigma Yellow Belt (SSYB™)', 
             issuer: 'SCRUMstudy', 
             certificateId: '636170',
