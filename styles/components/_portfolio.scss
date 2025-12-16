@@ -137,14 +137,12 @@
 }
 
 // Reduce padding for portfolio navigation section
-.section-box .section-sm {
-	&.bg-dark {
-		padding: 20px 0;
-		@include breakpoint-less(lg) {
-			padding: 18px 0;
-		}
-		@include breakpoint-less(md) {
-			padding: 15px 0;
-		}
+.section-box .section-sm.bg-dark.border-radius-1 {
+	padding: 20px 0 !important;
+	@include breakpoint-less(lg) {
+		padding: 18px 0 !important;
+	}
+	@include breakpoint-less(md) {
+		padding: 15px 0 !important;
 	}
 }
