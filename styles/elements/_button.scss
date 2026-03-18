@@ -95,6 +95,22 @@ a, button {
 		}
 	}
 }
+
+// Botón sin animación de subir/bajar — solo cambio de color al hover
+.button-nav {
+	span {
+		color: inherit;
+		@include transition(color 0.2s ease);
+		&::before,
+		&::after {
+			display: none !important;
+		}
+	}
+	&:hover:not(.btn-disabled) span {
+		color: rgba(216, 180, 254, 1);
+	}
+}
+
 .btn-disabled {
 	cursor: not-allowed;
 }

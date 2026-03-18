@@ -25,109 +25,62 @@ export const portfolioData = {
     ],
     projects: [
         {
-            slug: 'chatbot-validation',
-            group: 'manual',
-            icon: 'bi bi-chat-dots',
-            ES: {
-                title: 'Chatbot Validation – Educational Flow Testing',
-                description: 'Validación manual de flujos educativos en chatbot mediante pruebas funcionales exhaustivas. Este proyecto incluye la creación de casos de prueba, ejecución de pruebas manuales, validación de respuestas del chatbot, verificación de flujos conversacionales y documentación completa con evidencias (screenshots, logs y reportes detallados). Enfoque en calidad de experiencia conversacional y cobertura de escenarios educativos.',
-                content: 'Proyecto de validación de chatbot enfocado en flujos educativos. Se realizaron pruebas manuales exhaustivas para validar la funcionalidad, usabilidad y precisión de las respuestas del chatbot en diferentes escenarios educativos. El proyecto incluye documentación completa con evidencias visuales, casos de prueba detallados y reportes de hallazgos.',
-                client: 'UMM',
-                projectLink: {
-                    title: 'Ver Documentación',
-                    url: 'https://github.com/jennyloz89/qa-chatbot-validation'
-                },
-            },
-            EN: {
-                title: 'Chatbot Validation – Educational Flow Testing',
-                description: 'Manual validation of educational flows in chatbot through comprehensive functional testing. This project includes test case creation, manual test execution, chatbot response validation, conversational flow verification, and complete documentation with evidence (screenshots, logs, and detailed reports). Focus on conversational experience quality and educational scenario coverage.',
-                content: 'Chatbot validation project focused on educational flows. Comprehensive manual testing was performed to validate functionality, usability, and accuracy of chatbot responses across different educational scenarios. The project includes complete documentation with visual evidence, detailed test cases, and findings reports.',
-                client: 'UMM',
-                projectLink: {
-                    title: 'View Documentation',
-                    url: 'https://github.com/jennyloz89/qa-chatbot-validation'
-                },
-            },
-            services: [
-                { name: 'Manual Testing' },
-                { name: 'Chatbot QA' },
-                { name: 'Documentation' },
-            ],
-            categories: [
-                { name: 'Manual Testing' },
-                { name: 'Chatbot Validation' },
-                { name: 'Educational Technology' }
-            ],
-        },
-        {
-            slug: 'api-rest-postman-newman',
-            group: 'api',
-            icon: 'bi bi-code-slash',
-            ES: {
-                title: 'API REST Testing – Postman & Newman',
-                description: 'Automatización de pruebas de APIs REST utilizando Postman para diseño y ejecución de colecciones de pruebas, integración con Newman para ejecución en línea de comandos (CLI) y configuración de pipelines CI/CD. Este proyecto incluye validación de endpoints, verificación de respuestas HTTP, manejo de autenticación, pruebas de carga y generación de reportes automatizados para integración continua.',
-                content: 'Proyecto de automatización de pruebas de APIs REST que demuestra la integración de Postman con Newman para ejecutar pruebas automatizadas en entornos de CI/CD. Incluye colecciones de Postman bien estructuradas, scripts de pre-request y test, configuración de variables de entorno, ejecución mediante CLI y generación de reportes HTML/JSON para análisis de resultados.',
-                client: 'Personal',
-                projectLink: {
-                    title: 'Repositorio GitHub',
-                    url: 'https://github.com/jennyloz89/qa-api-postman'
-                },
-            },
-            EN: {
-                title: 'REST API Testing – Postman & Newman',
-                description: 'REST API test automation using Postman for test collection design and execution, integration with Newman for command-line interface (CLI) execution, and CI/CD pipeline configuration. This project includes endpoint validation, HTTP response verification, authentication handling, load testing, and automated report generation for continuous integration.',
-                content: 'REST API test automation project demonstrating Postman integration with Newman for running automated tests in CI/CD environments. Includes well-structured Postman collections, pre-request and test scripts, environment variable configuration, CLI execution, and HTML/JSON report generation for results analysis.',
-                client: 'Personal',
-                projectLink: {
-                    title: 'GitHub Repository',
-                    url: 'https://github.com/jennyloz89/qa-api-postman'
-                },
-            },
-            services: [
-                { name: 'Postman' },
-                { name: 'Newman' },
-                { name: 'CI/CD' },
-            ],
-            categories: [
-                { name: 'API Testing' },
-                { name: 'Test Automation' },
-                { name: 'CI/CD' }
-            ],
-        },
-        {
-            slug: 'third',
+            slug: 'cypress-login-saucedemo',
             group: 'e2e',
             githubUrl: 'https://github.com/jennyloz89/cypress-login-saucedemo',
+            ciWorkflow: 'cypress.yml',
             icon: 'bi bi-shield-check',
             ES: {
                 title: 'Cypress E2E – SauceDemo',
-                description: 'Automatización de login en SauceDemo usando Cypress y buenas prácticas de QA. Este proyecto demuestra cómo validar el flujo de autenticación con credenciales válidas e inválidas, navegación al dashboard, verificación de elementos visibles y uso de fixtures para datos de prueba. Incluye Page Object Model (POM), comandos personalizados reutilizables y reportes con screenshots para trazabilidad.',
-                content: '',
+                description: 'Automatización de login en SauceDemo usando Cypress y buenas prácticas de QA. Incluye reportes HTML con Mochawesome, pipeline CI/CD con GitHub Actions y publicación de reportes en GitHub Pages. Valida el flujo de autenticación con credenciales válidas e inválidas, navegación al dashboard, verificación de elementos visibles y uso de fixtures. Page Object Model (POM), comandos personalizados reutilizables y trazabilidad con screenshots.',
+                content: 'Proyecto E2E con Cypress sobre SauceDemo: reportes HTML generados con Mochawesome, ejecución en CI con GitHub Actions y reportes publicados en GitHub Pages.',
                 client: 'Personal',
                 projectLink: {
-                    title: 'www.flatheme.net',
-                    url: 'https://www.flatheme.net'
+                    title: 'Repositorio GitHub',
+                    url: 'https://github.com/jennyloz89/cypress-login-saucedemo'
+                },
+                reportLink: {
+                    title: 'Ver reporte de pruebas (Mochawesome)',
+                    url: 'https://jennyloz89.github.io/cypress-login-saucedemo/'
                 },
             },
             EN: {
                 title: 'Cypress E2E – SauceDemo',
-                description: 'Login automation in SauceDemo using Cypress and QA best practices. This project demonstrates how to validate the authentication flow with valid and invalid credentials, navigation to the dashboard, verification of visible elements, and use of fixtures for test data. Includes Page Object Model (POM), reusable custom commands, and reports with screenshots for traceability.',
-                content: '',
+                description: 'Login automation in SauceDemo using Cypress and QA best practices. Includes HTML reports with Mochawesome, CI/CD pipeline with GitHub Actions, and reports published on GitHub Pages. Validates authentication flow with valid and invalid credentials, dashboard navigation, visible elements verification, and fixture usage. Page Object Model (POM), reusable custom commands, and screenshot traceability.',
+                content: 'E2E project with Cypress on SauceDemo: HTML reports with Mochawesome, CI execution with GitHub Actions, and reports published on GitHub Pages.',
                 client: 'Personal',
                 projectLink: {
-                    title: 'www.flatheme.net',
-                    url: 'https://www.flatheme.net'
+                    title: 'GitHub Repository',
+                    url: 'https://github.com/jennyloz89/cypress-login-saucedemo'
+                },
+                reportLink: {
+                    title: 'View test report (Mochawesome)',
+                    url: 'https://jennyloz89.github.io/cypress-login-saucedemo/'
                 },
             },
             services: [
                 { name: 'JavaScript' },
                 { name: 'Cypress' },
+                { name: 'Mochawesome' },
+                { name: 'GitHub Actions' },
             ],
             categories: [
-                { name: 'Category' },
-                { name: 'Category' },
-                { name: 'Category' }
+                { name: 'E2E Testing' },
+                { name: 'Test Automation' },
+                { name: 'CI/CD' }
             ],
+            metrics: {
+                ES: [
+                    { value: '31', label: 'Tests' },
+                    { value: '2', label: 'Spec' },
+                    { value: '0', label: 'Fallos' },
+                ],
+                EN: [
+                    { value: '31', label: 'Tests' },
+                    { value: '2', label: 'Spec' },
+                    { value: '0', label: 'Failures' },
+                ],
+            },
         },
         {
             slug: 'mi-portafolio',
@@ -172,7 +125,7 @@ export const portfolioData = {
             icon: 'bi bi-bug',
             ES: {
                 title: 'PokeAPI QA Portfolio',
-                description: 'Suite de pruebas de QA sobre la API pública de Pokémon (PokeAPI) con Postman y Newman. Incluye diseño de tests, validación de contrato con JSON Schema (tv4), reportes HTML con newman-reporter-htmlextra, pipeline CI/CD con GitHub Actions y reportes publicados en GitHub Pages. 14 requests, 43 assertions, 0 fallos.',
+                description: 'Suite de pruebas de QA sobre la API pública de Pokémon (PokeAPI) con Postman y Newman. Incluye diseño de tests, validación de contrato con JSON Schema (tv4), reportes HTML con newman-reporter-htmlextra, pipeline CI/CD con GitHub Actions y reportes publicados en GitHub Pages.',
                 content: 'Proyecto de QA sobre PokeAPI: pruebas funcionales y de regresión, validación de endpoints y de estructura de respuestas. Herramientas: Postman (diseño y scripts), Newman (ejecución CLI), newman-reporter-htmlextra (reportes HTML), GitHub Actions (CI/CD en cada push), GitHub Pages (reportes públicos), JSON Schema tv4 (validación de contrato). Reporte disponible en GitHub Pages.',
                 client: 'Personal',
                 projectLink: {
@@ -190,7 +143,7 @@ export const portfolioData = {
             },
             EN: {
                 title: 'PokeAPI QA Portfolio',
-                description: 'QA test suite on the public Pokémon API (PokeAPI) with Postman and Newman. Includes test design, contract validation with JSON Schema (tv4), HTML reports with newman-reporter-htmlextra, CI/CD with GitHub Actions, and reports on GitHub Pages. 14 requests, 43 assertions, 0 failures.',
+                description: 'QA test suite on the public Pokémon API (PokeAPI) with Postman and Newman. Includes test design, contract validation with JSON Schema (tv4), HTML reports with newman-reporter-htmlextra, CI/CD with GitHub Actions, and reports on GitHub Pages.',
                 content: 'QA project on PokeAPI: functional and regression tests, endpoint and response structure validation. Tools: Postman (design and scripts), Newman (CLI runner), newman-reporter-htmlextra (HTML reports), GitHub Actions (CI/CD on every push), GitHub Pages (public reports), JSON Schema tv4 (contract validation). Report available on GitHub Pages.',
                 client: 'Personal',
                 projectLink: {
@@ -220,6 +173,18 @@ export const portfolioData = {
                 { name: 'CI/CD' },
                 { name: 'Quality Assurance' }
             ],
+            metrics: {
+                ES: [
+                    { value: '14', label: 'Requests' },
+                    { value: '43', label: 'Assertions' },
+                    { value: '0', label: 'Fallos' },
+                ],
+                EN: [
+                    { value: '14', label: 'Requests' },
+                    { value: '43', label: 'Assertions' },
+                    { value: '0', label: 'Failures' },
+                ],
+            },
         },
     ],
     navigation: {
@@ -234,6 +199,8 @@ export const portfolioData = {
             documentation: 'Documentación',
             viewDocumentation: 'Ver Documentación',
             loadReport: 'Pruebas de carga',
+            metrics: 'Métricas',
+            ciStatus: 'CI',
         },
         EN: {
             prev: 'Prev',
@@ -246,6 +213,8 @@ export const portfolioData = {
             documentation: 'Documentation',
             viewDocumentation: 'View Documentation',
             loadReport: 'Load testing',
+            metrics: 'Metrics',
+            ciStatus: 'CI',
         },
     }
 };

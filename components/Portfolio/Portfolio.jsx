@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { portfolioData } from './PortfolioData';
 import Link from 'next/link';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -9,6 +9,7 @@ const Portfolio = () => {
     const currentData = portfolioData[language];
     const projects = portfolioData.projects;
     const groups = portfolioData.groups || [];
+    const [expandedGroupId, setExpandedGroupId] = useState(null);
 
     // Agrupar proyectos por group (mantener orden de groups)
     let projectsByGroup = groups.map((gr) => ({
@@ -49,28 +50,49 @@ const Portfolio = () => {
                     </div>
 
                     {projectsByGroup.map((group) => (
-                        <div key={group.id} className="portfolio-group mb-5">
-                            <h2 className="h4 text-white-08 mb-3 mb-md-4">{group[language].title}</h2>
-                            <div className="row g-4">
-                                {group.projects.map((item, index) => (
-                                    <div key={item.slug} className="col-12 col-sm-6 col-lg-4">
-                                        <div className="portfolio-box">
-                                            <div className="portfolio-img">
-                                                <Link href={`portfolio/${item.slug}`}>
-                                                    <div className="portfolio-icon-wrapper">
-                                                        <i className={item.icon}></i>
-                                                    </div>
-                                                </Link>
+                        <div
+                            key={group.id}
+                            className={`portfolio-group mb-4 ${expandedGroupId === group.id ? 'portfolio-group-expanded' : ''}`}
+                            onMouseEnter={() => setExpandedGroupId(group.id)}
+                            onMouseLeave={() => setExpandedGroupId(null)}
+                        >
+                            <h2
+                                className="portfolio-group-trigger h4 text-white-08 mb-0"
+                                role="button"
+                                tabIndex={0}
+                                onClick={() => setExpandedGroupId((id) => (id === group.id ? null : group.id))}
+                                onKeyDown={(e) => {
+                                    if (e.key === 'Enter' || e.key === ' ') {
+                                        e.preventDefault();
+                                        setExpandedGroupId((id) => (id === group.id ? null : group.id));
+                                    }
+                                }}
+                            >
+                                <span className="portfolio-group-title">{group[language].title}</span>
+                                <i className="bi bi-chevron-down portfolio-group-chevron"></i>
+                            </h2>
+                            <div className="portfolio-group-projects">
+                                <div className="row g-4 pt-3">
+                                    {group.projects.map((item) => (
+                                        <div key={item.slug} className="col-12 col-sm-6 col-lg-4">
+                                            <div className="portfolio-box">
+                                                <div className="portfolio-img">
+                                                    <Link href={`/portfolio/${item.slug}`}>
+                                                        <div className="portfolio-icon-wrapper">
+                                                            <i className={item.icon}></i>
+                                                        </div>
+                                                    </Link>
+                                                </div>
+                                                <h2 className="mb-0">
+                                                    <Link className="portfolio-caption" href={`/portfolio/${item.slug}`}>
+                                                        <i className="bi bi-arrow-right"></i>
+                                                        {item[language].title}
+                                                    </Link>
+                                                </h2>
                                             </div>
-                                            <h2 className="mb-0">
-                                                <Link className="portfolio-caption" href={`portfolio/${item.slug}`}>
-                                                    <i className="bi bi-arrow-right"></i>
-                                                    {item[language].title}
-                                                </Link>
-                                            </h2>
                                         </div>
-                                    </div>
-                                ))}
+                                    ))}
+                                </div>
                             </div>
                         </div>
                     ))}

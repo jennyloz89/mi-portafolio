@@ -1,6 +1,47 @@
 //
-// Portfolio //
+// Portfolio — secciones desplegables al pasar el mouse
 //
+.portfolio-group {
+	.portfolio-group-trigger {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.5rem;
+		cursor: pointer;
+		padding: 12px 0;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+		-webkit-transition: border-color 0.2s ease, color 0.2s ease;
+		transition: border-color 0.2s ease, color 0.2s ease;
+		&:hover {
+			color: rgba(255, 255, 255, 0.95);
+			border-bottom-color: rgba(168, 85, 247, 0.4);
+		}
+	}
+	.portfolio-group-chevron {
+		font-size: 1rem;
+		opacity: 0.6;
+		-webkit-transition: transform 0.25s ease, opacity 0.2s ease;
+		transition: transform 0.25s ease, opacity 0.2s ease;
+	}
+	.portfolio-group-projects {
+		max-height: 0;
+		overflow: hidden;
+		opacity: 0;
+		-webkit-transition: max-height 0.35s ease, opacity 0.25s ease;
+		transition: max-height 0.35s ease, opacity 0.25s ease;
+	}
+	&.portfolio-group-expanded {
+		.portfolio-group-chevron {
+			@include transform(rotate(180deg));
+			opacity: 1;
+		}
+		.portfolio-group-projects {
+			max-height: 800px;
+			opacity: 1;
+		}
+	}
+}
+
 .portfolio-box {
 	.portfolio-img {
 		position: relative;

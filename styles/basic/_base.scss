@@ -150,49 +150,20 @@ img {
 }
 
 //
-// Text Link Hover //
+// Text Link Hover — solo cambio de color al pasar el mouse
 //
 .link-hover {
 	display: inline-block;
-	overflow: hidden;
 	vertical-align: middle;
+	color: rgba(255, 255, 255, 0.85);
+	text-decoration: none;
+	@include transition(color 0.2s ease);
 	span {
-		display: block;
-		position: relative;
-		color: transparent;
-		&:before, &:after {
-			content: attr(data-text);
-			position: absolute;
-			left: 0;
-			color: white;
-			@include transition(ease-out 0.16s);
-		}
-		&:before {
-			top: 0;
-		}
-		&:after {
-			visibility: hidden;
-			opacity: 0;
-			top: 100%;
-		}
+		display: inline;
+		color: inherit;
 	}
 	&:hover {
-		&:before {
-			opacity: 0.4;
-			@include transform(translateY(-50%) scale(2.7));
-		}
-		span {
-			&:before {
-				visibility: hidden;
-				opacity: 0;
-				top: -100%;
-			}
-			&:after {
-				visibility: visible;
-				opacity: 1;
-				top: 0;
-			}
-		}
+		color: rgba(216, 180, 254, 1);
 	}
 }
 
