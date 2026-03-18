@@ -143,14 +143,25 @@
 	margin-right: 6px;
 }
 
+// Portfolio detail page: boxes grid — misma altura y espaciado uniforme
+.portfolio-detail-boxes {
+	align-items: stretch;
+	.col-lg {
+		min-width: 0;
+	}
+}
+
 // Center content in fancy-box on portfolio detail page
 .section .fancy-box {
 	text-align: center !important;
+	display: flex !important;
+	flex-direction: column !important;
 	* {
 		text-align: center !important;
 	}
 	.sm-heading {
 		text-align: center !important;
+		flex-shrink: 0;
 	}
 	p {
 		text-align: center !important;
@@ -166,6 +177,7 @@
 		margin-left: auto !important;
 		margin-right: auto !important;
 		padding-left: 0 !important;
+		gap: 0.25em 0.75em;
 		li {
 			text-align: center !important;
 		}
@@ -174,6 +186,7 @@
 		text-align: center !important;
 		display: inline-block;
 		margin: 0 auto !important;
+		flex-shrink: 0;
 	}
 	a {
 		text-align: center !important;

@@ -17,9 +17,16 @@ export const portfolioData = {
             description: "Here I share some of the projects where I've applied functional QA, automation, and conversational validation. Each one reflects my focus on quality, clear documentation, and user experience."
         },
     },
+    groups: [
+        { id: 'api', ES: { title: 'Proyectos de API' }, EN: { title: 'API Projects' } },
+        { id: 'e2e', ES: { title: 'Automatización E2E' }, EN: { title: 'E2E Automation' } },
+        { id: 'manual', ES: { title: 'Pruebas manuales y validación' }, EN: { title: 'Manual Testing & Validation' } },
+        { id: 'web', ES: { title: 'Desarrollo web' }, EN: { title: 'Web Development' } },
+    ],
     projects: [
         {
             slug: 'chatbot-validation',
+            group: 'manual',
             icon: 'bi bi-chat-dots',
             ES: {
                 title: 'Chatbot Validation – Educational Flow Testing',
@@ -54,6 +61,7 @@ export const portfolioData = {
         },
         {
             slug: 'api-rest-postman-newman',
+            group: 'api',
             icon: 'bi bi-code-slash',
             ES: {
                 title: 'API REST Testing – Postman & Newman',
@@ -88,6 +96,7 @@ export const portfolioData = {
         },
         {
             slug: 'third',
+            group: 'e2e',
             githubUrl: 'https://github.com/jennyloz89/cypress-login-saucedemo',
             icon: 'bi bi-shield-check',
             ES: {
@@ -122,6 +131,7 @@ export const portfolioData = {
         },
         {
             slug: 'mi-portafolio',
+            group: 'web',
             githubUrl: 'https://github.com/jennyloz89/mi-portafolio',
             icon: 'bi bi-laptop',
             ES: {
@@ -155,6 +165,62 @@ export const portfolioData = {
                 { name: 'Personal Portfolio' }
             ],
         },
+        {
+            slug: 'pokeapi-qa-portfolio',
+            group: 'api',
+            githubUrl: 'https://github.com/jennyloz89/pokeapi-qa-portfolio',
+            icon: 'bi bi-bug',
+            ES: {
+                title: 'PokeAPI QA Portfolio',
+                description: 'Suite de pruebas de QA sobre la API pública de Pokémon (PokeAPI) con Postman y Newman. Incluye diseño de tests, validación de contrato con JSON Schema (tv4), reportes HTML con newman-reporter-htmlextra, pipeline CI/CD con GitHub Actions y reportes publicados en GitHub Pages. 14 requests, 43 assertions, 0 fallos.',
+                content: 'Proyecto de QA sobre PokeAPI: pruebas funcionales y de regresión, validación de endpoints y de estructura de respuestas. Herramientas: Postman (diseño y scripts), Newman (ejecución CLI), newman-reporter-htmlextra (reportes HTML), GitHub Actions (CI/CD en cada push), GitHub Pages (reportes públicos), JSON Schema tv4 (validación de contrato). Reporte disponible en GitHub Pages.',
+                client: 'Personal',
+                projectLink: {
+                    title: 'Repositorio GitHub',
+                    url: 'https://github.com/jennyloz89/pokeapi-qa-portfolio'
+                },
+                reportLink: {
+                    title: 'Ver reporte de pruebas',
+                    url: 'https://jennyloz89.github.io/pokeapi-qa-portfolio/reports/report.html'
+                },
+                loadReportLink: {
+                    title: 'Ver reporte de pruebas de carga (k6)',
+                    url: 'https://jennyloz89.github.io/pokeapi-qa-portfolio/reports/k6-report.html'
+                },
+            },
+            EN: {
+                title: 'PokeAPI QA Portfolio',
+                description: 'QA test suite on the public Pokémon API (PokeAPI) with Postman and Newman. Includes test design, contract validation with JSON Schema (tv4), HTML reports with newman-reporter-htmlextra, CI/CD with GitHub Actions, and reports on GitHub Pages. 14 requests, 43 assertions, 0 failures.',
+                content: 'QA project on PokeAPI: functional and regression tests, endpoint and response structure validation. Tools: Postman (design and scripts), Newman (CLI runner), newman-reporter-htmlextra (HTML reports), GitHub Actions (CI/CD on every push), GitHub Pages (public reports), JSON Schema tv4 (contract validation). Report available on GitHub Pages.',
+                client: 'Personal',
+                projectLink: {
+                    title: 'GitHub Repository',
+                    url: 'https://github.com/jennyloz89/pokeapi-qa-portfolio'
+                },
+                reportLink: {
+                    title: 'View test report',
+                    url: 'https://jennyloz89.github.io/pokeapi-qa-portfolio/reports/report.html'
+                },
+                loadReportLink: {
+                    title: 'View load test report (k6)',
+                    url: 'https://jennyloz89.github.io/pokeapi-qa-portfolio/reports/k6-report.html'
+                },
+            },
+            services: [
+                { name: 'Postman' },
+                { name: 'Newman' },
+                { name: 'newman-reporter-htmlextra' },
+                { name: 'GitHub Actions' },
+                { name: 'GitHub Pages' },
+                { name: 'JSON Schema (tv4)' },
+            ],
+            categories: [
+                { name: 'API Testing' },
+                { name: 'REST API' },
+                { name: 'CI/CD' },
+                { name: 'Quality Assurance' }
+            ],
+        },
     ],
     navigation: {
         ES: {
@@ -167,6 +233,7 @@ export const portfolioData = {
             viewOnGitHub: 'Ver en GitHub',
             documentation: 'Documentación',
             viewDocumentation: 'Ver Documentación',
+            loadReport: 'Pruebas de carga',
         },
         EN: {
             prev: 'Prev',
@@ -178,6 +245,7 @@ export const portfolioData = {
             viewOnGitHub: 'View on GitHub',
             documentation: 'Documentation',
             viewDocumentation: 'View Documentation',
+            loadReport: 'Load testing',
         },
     }
 };

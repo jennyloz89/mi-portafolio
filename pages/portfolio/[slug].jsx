@@ -34,11 +34,11 @@ const ProjectPage = ({ project, prevProject, nextProject }) => {
                                 <p>{currentProject.description}</p>
                             </div>
                         </div> {/* end row */}
-                        <div className="row g-4 mt-5 justify-content-center">
-                            <div className="col-12 col-md-6 col-lg-3">
-                                <div className="fancy-box">
-                                    <h6 className="sm-heading mb-1">{navTexts.services}:</h6>
-                                    <ul className="list-inline-dot">
+                        <div className="row g-4 mt-5 portfolio-detail-boxes">
+                            <div className="col-12 col-sm-6 col-lg">
+                                <div className="fancy-box h-100 d-flex flex-column">
+                                    <h6 className="sm-heading mb-2">{navTexts.services}:</h6>
+                                    <ul className="list-inline-dot flex-grow-1 mb-0">
                                         {project.services.map((item, index) => (
                                             <li key={index}>
                                                 {item.name}
@@ -47,31 +47,51 @@ const ProjectPage = ({ project, prevProject, nextProject }) => {
                                     </ul>
                                 </div>
                             </div>
-                            <div className="col-12 col-md-6 col-lg-3">
-                                <div className="fancy-box">
-                                    <h6 className="sm-heading mb-1">{navTexts.client}:</h6>
-                                    <p>{currentProject.client}</p>
+                            <div className="col-12 col-sm-6 col-lg">
+                                <div className="fancy-box h-100 d-flex flex-column">
+                                    <h6 className="sm-heading mb-2">{navTexts.client}:</h6>
+                                    <p className="mb-0 flex-grow-1">{currentProject.client}</p>
                                 </div>
                             </div>
-                            <div className="col-12 col-md-6 col-lg-3">
-                                <div className="fancy-box">
+                            <div className="col-12 col-sm-6 col-lg">
+                                <div className="fancy-box h-100 d-flex flex-column">
                                     {project.githubUrl ? (
                                         <>
-                                            <h6 className="sm-heading mb-1">{navTexts.githubRepository}:</h6>
-                                            <a className="link-hover" href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                                            <h6 className="sm-heading mb-2">{navTexts.githubRepository}:</h6>
+                                            <a className="link-hover mt-auto" href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                                                 <span data-text={navTexts.viewOnGitHub}>{navTexts.viewOnGitHub}</span>
                                             </a>
                                         </>
                                     ) : (
                                         <>
-                                            <h6 className="sm-heading mb-1">{navTexts.projectLink}:</h6>
-                                            <Link className="link-hover" href={currentProject.projectLink.url}>
+                                            <h6 className="sm-heading mb-2">{navTexts.projectLink}:</h6>
+                                            <Link className="link-hover mt-auto" href={currentProject.projectLink.url}>
                                                 <span data-text={currentProject.projectLink.title}>{currentProject.projectLink.title}</span>
                                             </Link>
                                         </>
                                     )}
                                 </div>
                             </div>
+                            {currentProject.reportLink && (
+                                <div className="col-12 col-sm-6 col-lg">
+                                    <div className="fancy-box h-100 d-flex flex-column">
+                                        <h6 className="sm-heading mb-2">{navTexts.documentation}:</h6>
+                                        <a className="link-hover mt-auto" href={currentProject.reportLink.url} target="_blank" rel="noopener noreferrer">
+                                            <span data-text={currentProject.reportLink.title}>{currentProject.reportLink.title}</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            )}
+                            {currentProject.loadReportLink && (
+                                <div className="col-12 col-sm-6 col-lg">
+                                    <div className="fancy-box h-100 d-flex flex-column">
+                                        <h6 className="sm-heading mb-2">{navTexts.loadReport}:</h6>
+                                        <a className="link-hover mt-auto" href={currentProject.loadReportLink.url} target="_blank" rel="noopener noreferrer">
+                                            <span data-text={currentProject.loadReportLink.title}>{currentProject.loadReportLink.title}</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            )}
                         </div> {/* end row */}
                     </div> {/* end container */}
                 </div>
