@@ -79,10 +79,10 @@ const About = () => {
                             <div className="d-flex align-items-center gap-3 justify-content-center">
                                 <h6 className="sm-heading mb-0">{language === 'ES' ? 'Descargar CV' : 'Download CV'}</h6>
                                 <a 
-                                    href={language === 'ES' ? "/CV_Jennifer_Lozano_ES.pdf" : "/CV_Jennifer_Lozano_EN.pdf"}
+                                    href="/CV_Jennifer_Lozano_ES.pdf"
                                     download 
                                     className="button-circle button-circle-sm"
-                                    aria-label={language === 'ES' ? 'Descargar CV en español' : 'Download CV in English'}
+                                    aria-label={language === 'ES' ? 'Descargar CV' : 'Download CV'}
                                 >
                                     <i className="bi bi-download"></i>
                                     <i className="bi bi-download"></i>
