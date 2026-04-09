@@ -194,7 +194,7 @@ export const portfolioData = {
             githubUrl: 'https://github.com/jennyloz89/pokeapi-qa-portfolio',
             icon: 'bi bi-bug',
             ES: {
-                title: 'PokeAPI QA Portfolio',
+                title: 'PokeAPI — Postman',
                 description: 'Suite de pruebas de QA sobre la API pública de Pokémon (PokeAPI) con Postman y Newman. Incluye diseño de tests, validación de contrato con JSON Schema (tv4), reportes HTML con newman-reporter-htmlextra, pipeline CI/CD con GitHub Actions y reportes publicados en GitHub Pages.',
                 content: 'Proyecto de QA sobre PokeAPI: pruebas funcionales y de regresión, validación de endpoints y de estructura de respuestas. Herramientas: Postman (diseño y scripts), Newman (ejecución CLI), newman-reporter-htmlextra (reportes HTML), GitHub Actions (CI/CD en cada push), GitHub Pages (reportes públicos), JSON Schema tv4 (validación de contrato). Reporte disponible en GitHub Pages.',
                 client: 'Personal',
@@ -212,7 +212,7 @@ export const portfolioData = {
                 },
             },
             EN: {
-                title: 'PokeAPI QA Portfolio',
+                title: 'PokeAPI — Postman',
                 description: 'QA test suite on the public Pokémon API (PokeAPI) with Postman and Newman. Includes test design, contract validation with JSON Schema (tv4), HTML reports with newman-reporter-htmlextra, CI/CD with GitHub Actions, and reports on GitHub Pages.',
                 content: 'QA project on PokeAPI: functional and regression tests, endpoint and response structure validation. Tools: Postman (design and scripts), Newman (CLI runner), newman-reporter-htmlextra (HTML reports), GitHub Actions (CI/CD on every push), GitHub Pages (public reports), JSON Schema tv4 (contract validation). Report available on GitHub Pages.',
                 client: 'Personal',
@@ -262,7 +262,7 @@ export const portfolioData = {
             githubUrl: 'https://github.com/jennyloz89/restfulbooker-pytest',
             icon: 'bi bi-filetype-py',
             ES: {
-                title: 'Restful-Booker — API Testing (pytest)',
+                title: 'Restful-Booker — pytest',
                 description: 'Suite de pruebas de API sobre Restful-Booker con Python, pytest y requests: autenticación, operaciones CRUD sobre bookings, validación de esquemas JSON y fixtures reutilizables. Incluye pipeline CI/CD con GitHub Actions y generación de reportes HTML.',
                 content: 'Proyecto de API testing con pytest: cobertura de auth, CRUD, validación de contrato con esquemas, integración continua en GitHub Actions y reportes HTML.',
                 client: 'Personal',
@@ -276,7 +276,7 @@ export const portfolioData = {
                 },
             },
             EN: {
-                title: 'Restful-Booker — API Testing (pytest)',
+                title: 'Restful-Booker — pytest',
                 description: 'API testing suite for Restful-Booker using Python, pytest, and requests: authentication, CRUD operations on bookings, JSON schema validation, and reusable fixtures. Includes CI/CD with GitHub Actions and HTML report generation.',
                 content: 'pytest-based API testing project: auth and CRUD coverage, schema validation, continuous integration with GitHub Actions, and HTML reports.',
                 client: 'Personal',
@@ -322,7 +322,7 @@ export const portfolioData = {
             githubUrl: 'https://github.com/jennyloz89/graphql-countries-pytest',
             icon: 'bi bi-diagram-3',
             ES: {
-                title: 'GraphQL Countries — pytest',
+                title: 'GraphQL Countries',
                 description: 'Suite de pruebas sobre una API GraphQL (países, continentes e idiomas): consultas funcionales, validación de esquema y respuesta, y casos negativos (campos inválidos, códigos inexistentes, variables obligatorias, consultas vacías). Python, pytest y pytest-html; CI/CD con GitHub Actions y reporte publicado en GitHub Pages.',
                 content: 'GraphQL API testing con pytest: queries, validación de estructura y campos, pruebas de error y relaciones anidadas; pipeline en GitHub Actions y reporte HTML en GitHub Pages.',
                 client: 'Personal',
@@ -336,7 +336,7 @@ export const portfolioData = {
                 },
             },
             EN: {
-                title: 'GraphQL Countries — pytest',
+                title: 'GraphQL Countries',
                 description: 'Test suite for a GraphQL API (countries, continents, and languages): functional queries, schema and response validation, and negative cases (invalid fields, non-existent codes, required variables, empty queries). Python, pytest, and pytest-html; CI/CD with GitHub Actions and reports on GitHub Pages.',
                 content: 'GraphQL API testing with pytest: queries, structure and field validation, error handling and nested relationships; GitHub Actions pipeline and HTML report on GitHub Pages.',
                 client: 'Personal',
