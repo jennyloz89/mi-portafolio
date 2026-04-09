@@ -31,7 +31,7 @@ export const portfolioData = {
             ciWorkflow: 'cypress.yml',
             icon: 'bi bi-shield-check',
             ES: {
-                title: 'Cypress E2E – SauceDemo',
+                title: 'SauceDemo — Cypress E2E',
                 description: 'Automatización de login en SauceDemo usando Cypress y buenas prácticas de QA. Incluye reportes HTML con Mochawesome, pipeline CI/CD con GitHub Actions y publicación de reportes en GitHub Pages. Valida el flujo de autenticación con credenciales válidas e inválidas, navegación al dashboard, verificación de elementos visibles y uso de fixtures. Page Object Model (POM), comandos personalizados reutilizables y trazabilidad con screenshots.',
                 content: 'Proyecto E2E con Cypress sobre SauceDemo: reportes HTML generados con Mochawesome, ejecución en CI con GitHub Actions y reportes publicados en GitHub Pages.',
                 client: 'Personal',
@@ -45,7 +45,7 @@ export const portfolioData = {
                 },
             },
             EN: {
-                title: 'Cypress E2E – SauceDemo',
+                title: 'SauceDemo — Cypress E2E',
                 description: 'Login automation in SauceDemo using Cypress and QA best practices. Includes HTML reports with Mochawesome, CI/CD pipeline with GitHub Actions, and reports published on GitHub Pages. Validates authentication flow with valid and invalid credentials, dashboard navigation, visible elements verification, and fixture usage. Page Object Model (POM), reusable custom commands, and screenshot traceability.',
                 content: 'E2E project with Cypress on SauceDemo: HTML reports with Mochawesome, CI execution with GitHub Actions, and reports published on GitHub Pages.',
                 client: 'Personal',
@@ -78,6 +78,76 @@ export const portfolioData = {
                 EN: [
                     { value: '31', label: 'Tests' },
                     { value: '2', label: 'Spec' },
+                    { value: '0', label: 'Failures' },
+                ],
+            },
+        },
+        {
+            slug: 'saucedemo-playwright',
+            group: 'e2e',
+            githubUrl: 'https://github.com/jennyloz89/saucedemo-playwright',
+            ciWorkflow: 'e2e-tests.yml',
+            hubReportUrl: 'https://jennyloz89.github.io/saucedemo-playwright/',
+            icon: 'bi bi-play-circle',
+            ES: {
+                title: 'SauceDemo — Playwright TypeScript',
+                description: 'Suite E2E con Playwright y TypeScript sobre SauceDemo: casos de login, inventario (inventory) y checkout; suites de regresión y smoke con etiquetas @regression y @smoke. Page Object Model (POM), fixtures, casos con @problem-user y @known-bug para bugs documentados. CI/CD con GitHub Actions y reportes HTML en GitHub Pages (functional + smoke y regresión).',
+                content: 'Automatización E2E con Playwright: flujos críticos (smoke), cobertura ampliada (regression), POM en TypeScript y pipeline en GitHub Actions (workflow e2e-tests). Reportes HTML publicados en GitHub Pages.',
+                client: 'Personal',
+                projectLink: {
+                    title: 'Repositorio GitHub',
+                    url: 'https://github.com/jennyloz89/saucedemo-playwright'
+                },
+                reportLink: {
+                    title: 'Ver reporte Functional + Smoke',
+                    url: 'https://jennyloz89.github.io/saucedemo-playwright/functional/index.html'
+                },
+                loadReportLink: {
+                    title: 'Ver reporte de regresión',
+                    url: 'https://jennyloz89.github.io/saucedemo-playwright/regression/index.html',
+                    sectionHeading: 'Regresión',
+                },
+            },
+            EN: {
+                title: 'SauceDemo — Playwright TypeScript',
+                description: 'E2E suite with Playwright and TypeScript on SauceDemo: login, inventory, and checkout test cases; regression and smoke suites tagged @regression and @smoke. Page Object Model (POM), fixtures, @problem-user and @known-bug cases for documented defects. CI/CD with GitHub Actions and HTML reports on GitHub Pages (functional + smoke and regression).',
+                content: 'Playwright E2E automation: critical flows (smoke), broader coverage (regression), TypeScript POM, and GitHub Actions pipeline (e2e-tests workflow). HTML reports published on GitHub Pages.',
+                client: 'Personal',
+                projectLink: {
+                    title: 'GitHub Repository',
+                    url: 'https://github.com/jennyloz89/saucedemo-playwright'
+                },
+                reportLink: {
+                    title: 'View Functional + Smoke report',
+                    url: 'https://jennyloz89.github.io/saucedemo-playwright/functional/index.html'
+                },
+                loadReportLink: {
+                    title: 'View regression report',
+                    url: 'https://jennyloz89.github.io/saucedemo-playwright/regression/index.html',
+                    sectionHeading: 'Regression',
+                },
+            },
+            services: [
+                { name: 'TypeScript' },
+                { name: 'Playwright' },
+                { name: 'Page Object Model' },
+                { name: 'GitHub Actions' },
+            ],
+            categories: [
+                { name: 'E2E Testing' },
+                { name: 'Test Automation' },
+                { name: 'CI/CD' },
+                { name: 'SauceDemo' },
+            ],
+            metrics: {
+                ES: [
+                    { value: '26', label: 'Tests' },
+                    { value: '2', label: 'Suites' },
+                    { value: '0', label: 'Fallos' },
+                ],
+                EN: [
+                    { value: '26', label: 'Tests' },
+                    { value: '2', label: 'Suites' },
                     { value: '0', label: 'Failures' },
                 ],
             },
@@ -199,6 +269,8 @@ export const portfolioData = {
             documentation: 'Documentación',
             viewDocumentation: 'Ver Documentación',
             loadReport: 'Pruebas de carga',
+            reportIndex: 'Índice de reportes',
+            reportIndexLink: 'Abrir en GitHub Pages',
             metrics: 'Métricas',
             ciStatus: 'CI',
         },
@@ -213,6 +285,8 @@ export const portfolioData = {
             documentation: 'Documentation',
             viewDocumentation: 'View Documentation',
             loadReport: 'Load testing',
+            reportIndex: 'Report index',
+            reportIndexLink: 'Open on GitHub Pages',
             metrics: 'Metrics',
             ciStatus: 'CI',
         },

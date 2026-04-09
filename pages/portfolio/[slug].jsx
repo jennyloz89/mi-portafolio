@@ -182,13 +182,25 @@ const ProjectPage = ({ project, prevProject, nextProject }) => {
                                 </div>
                             )}
 
-                            {/* Reporte de carga */}
+                            {/* Reporte de carga / regresión (título opcional por proyecto) */}
                             {currentProject.loadReportLink && (
                                 <div className="col-12 col-sm-6 col-lg">
                                     <div className="fancy-box h-100 d-flex flex-column">
-                                        <h6 className="sm-heading mb-2">{navTexts.loadReport}</h6>
+                                        <h6 className="sm-heading mb-2">{currentProject.loadReportLink.sectionHeading || navTexts.loadReport}</h6>
                                         <a className="link-hover mt-auto" href={currentProject.loadReportLink.url} target="_blank" rel="noopener noreferrer">
                                             <span data-text={currentProject.loadReportLink.title}>{currentProject.loadReportLink.title}</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            )}
+
+                            {/* Índice de reportes (GitHub Pages hub) */}
+                            {project.hubReportUrl && (
+                                <div className="col-12 col-sm-6 col-lg">
+                                    <div className="fancy-box h-100 d-flex flex-column">
+                                        <h6 className="sm-heading mb-2">{navTexts.reportIndex}</h6>
+                                        <a className="link-hover mt-auto" href={project.hubReportUrl} target="_blank" rel="noopener noreferrer">
+                                            <span data-text={navTexts.reportIndexLink}>{navTexts.reportIndexLink}</span>
                                         </a>
                                     </div>
                                 </div>
