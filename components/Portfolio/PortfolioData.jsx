@@ -316,6 +316,65 @@ export const portfolioData = {
                 ],
             },
         },
+        {
+            slug: 'graphql-countries-pytest',
+            group: 'api',
+            githubUrl: 'https://github.com/jennyloz89/graphql-countries-pytest',
+            icon: 'bi bi-diagram-3',
+            ES: {
+                title: 'GraphQL Countries — pytest',
+                description: 'Suite de pruebas sobre una API GraphQL (países, continentes e idiomas): consultas funcionales, validación de esquema y respuesta, y casos negativos (campos inválidos, códigos inexistentes, variables obligatorias, consultas vacías). Python, pytest y pytest-html; CI/CD con GitHub Actions y reporte publicado en GitHub Pages.',
+                content: 'GraphQL API testing con pytest: queries, validación de estructura y campos, pruebas de error y relaciones anidadas; pipeline en GitHub Actions y reporte HTML en GitHub Pages.',
+                client: 'Personal',
+                projectLink: {
+                    title: 'Repositorio GitHub',
+                    url: 'https://github.com/jennyloz89/graphql-countries-pytest'
+                },
+                reportLink: {
+                    title: 'Ver reporte de pruebas (pytest-html)',
+                    url: 'https://jennyloz89.github.io/graphql-countries-pytest/?sort=result'
+                },
+            },
+            EN: {
+                title: 'GraphQL Countries — pytest',
+                description: 'Test suite for a GraphQL API (countries, continents, and languages): functional queries, schema and response validation, and negative cases (invalid fields, non-existent codes, required variables, empty queries). Python, pytest, and pytest-html; CI/CD with GitHub Actions and reports on GitHub Pages.',
+                content: 'GraphQL API testing with pytest: queries, structure and field validation, error handling and nested relationships; GitHub Actions pipeline and HTML report on GitHub Pages.',
+                client: 'Personal',
+                projectLink: {
+                    title: 'GitHub Repository',
+                    url: 'https://github.com/jennyloz89/graphql-countries-pytest'
+                },
+                reportLink: {
+                    title: 'View test report (pytest-html)',
+                    url: 'https://jennyloz89.github.io/graphql-countries-pytest/?sort=result'
+                },
+            },
+            services: [
+                { name: 'Python' },
+                { name: 'pytest' },
+                { name: 'pytest-html' },
+                { name: 'GraphQL' },
+                { name: 'GitHub Actions' },
+            ],
+            categories: [
+                { name: 'API Testing' },
+                { name: 'GraphQL' },
+                { name: 'Python' },
+                { name: 'CI/CD' },
+            ],
+            metrics: {
+                ES: [
+                    { value: '16', label: 'Tests' },
+                    { value: '0', label: 'Fallos' },
+                    { value: '5s', label: 'Duración' },
+                ],
+                EN: [
+                    { value: '16', label: 'Tests' },
+                    { value: '0', label: 'Failures' },
+                    { value: '5s', label: 'Duration' },
+                ],
+            },
+        },
     ],
     navigation: {
         ES: {
