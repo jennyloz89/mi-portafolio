@@ -256,6 +256,66 @@ export const portfolioData = {
                 ],
             },
         },
+        {
+            slug: 'restfulbooker-pytest',
+            group: 'api',
+            githubUrl: 'https://github.com/jennyloz89/restfulbooker-pytest',
+            icon: 'bi bi-filetype-py',
+            ES: {
+                title: 'Restful-Booker — API Testing (pytest)',
+                description: 'Suite de pruebas de API sobre Restful-Booker con Python, pytest y requests: autenticación, operaciones CRUD sobre bookings, validación de esquemas JSON y fixtures reutilizables. Incluye pipeline CI/CD con GitHub Actions y generación de reportes HTML.',
+                content: 'Proyecto de API testing con pytest: cobertura de auth, CRUD, validación de contrato con esquemas, integración continua en GitHub Actions y reportes HTML.',
+                client: 'Personal',
+                projectLink: {
+                    title: 'Repositorio GitHub',
+                    url: 'https://github.com/jennyloz89/restfulbooker-pytest'
+                },
+                reportLink: {
+                    title: 'Ver reporte de pruebas (pytest-html)',
+                    url: 'https://jennyloz89.github.io/restfulbooker-pytest/?sort=result'
+                },
+            },
+            EN: {
+                title: 'Restful-Booker — API Testing (pytest)',
+                description: 'API testing suite for Restful-Booker using Python, pytest, and requests: authentication, CRUD operations on bookings, JSON schema validation, and reusable fixtures. Includes CI/CD with GitHub Actions and HTML report generation.',
+                content: 'pytest-based API testing project: auth and CRUD coverage, schema validation, continuous integration with GitHub Actions, and HTML reports.',
+                client: 'Personal',
+                projectLink: {
+                    title: 'GitHub Repository',
+                    url: 'https://github.com/jennyloz89/restfulbooker-pytest'
+                },
+                reportLink: {
+                    title: 'View test report (pytest-html)',
+                    url: 'https://jennyloz89.github.io/restfulbooker-pytest/?sort=result'
+                },
+            },
+            services: [
+                { name: 'Python' },
+                { name: 'pytest' },
+                { name: 'pytest-html' },
+                { name: 'requests' },
+                { name: 'GitHub Actions' },
+                { name: 'Schema validation' },
+            ],
+            categories: [
+                { name: 'API Testing' },
+                { name: 'REST API' },
+                { name: 'Python' },
+                { name: 'CI/CD' },
+            ],
+            metrics: {
+                ES: [
+                    { value: '16', label: 'Tests' },
+                    { value: '0', label: 'Fallos' },
+                    { value: '10s', label: 'Duración' },
+                ],
+                EN: [
+                    { value: '16', label: 'Tests' },
+                    { value: '0', label: 'Failures' },
+                    { value: '10s', label: 'Duration' },
+                ],
+            },
+        },
     ],
     navigation: {
         ES: {
